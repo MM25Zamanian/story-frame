@@ -1,18 +1,21 @@
 # syntax=docker/dockerfile:1
 
-# Stage 1: Build static assets using Bun
-FROM oven/bun:1.3-alpine AS builder
+# Stage 1: Build static assets using Node.js & Bun (for fast install and stable Next.js build)
+FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-# Install dependencies with frozen lockfile for speed and reproducibility
+# Install Bun for fast package installation
+RUN npm install -g bun@1.3.14
+
+# Install dependencies with frozen lockfile
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 
-# Copy source code and build Next.js static export
+# Copy source code and build Next.js static export using Node runtime
 COPY . .
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN bun run build
+RUN npx next build
 
 # Stage 2: Production static origin using pinned ghcr.io/gecut/nginx/cdn:2.0.0
 FROM ghcr.io/gecut/nginx/cdn:2.0.0
