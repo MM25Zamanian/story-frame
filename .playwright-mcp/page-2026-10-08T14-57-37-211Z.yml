@@ -1,0 +1,182 @@
+- generic [active] [ref=f3e1]:
+  - generic [ref=f3e2]:
+    - banner [ref=f3e3]:
+      - generic [ref=f3e4]:
+        - link "Story Frame — بازگشت به گالری" [ref=f3e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f3e8]:
+            - generic [ref=f3e9]: Story Frame
+            - generic [ref=f3e10]: استودیو نمایشگاه دیجیتال
+        - generic [ref=f3e11]:
+          - link "آثار (۸)" [ref=f3e12] [cursor=pointer]:
+            - /url: /
+          - button "Switch to dark mode" [ref=f3e15] [cursor=pointer]
+    - main [ref=f3e20]:
+      - generic [ref=f3e21]:
+        - region [ref=f3e22]:
+          - generic [ref=f3e23]:
+            - generic [ref=f3e25]: نمایشگاه دیجیتال شماره ۰۱
+            - generic [ref=f3e26]: ·
+            - generic [ref=f3e27]: هشت پرده از سکوت و فرم
+          - heading "میان فرم، نور و سکوت" [level=1] [ref=f3e28]
+          - paragraph [ref=f3e29]: این مجموعه گزیده‌ای است از هشت اثر تجسمی که مرزهای میان ماده صلب، تابش نور طبیعی و تجربه زمانی فضا را می‌کاوند. هر اثر از تصویری با وضوح بالا، متنی تاملی و ویدیویی پیوسته تشکیل شده است.
+          - generic [ref=f3e30]:
+            - generic [ref=f3e31]: "تعداد آثار: ۸ اثر"
+            - generic [ref=f3e32]: ·
+            - generic [ref=f3e33]: "مدیوم: تصویر + متن + ویدیو"
+            - generic [ref=f3e34]: ·
+            - generic [ref=f3e35]: "سال انتشار: ۲۰۲۴ - ۲۰۲۶"
+        - region "گالری آثار نمایشگاه" [ref=f3e36]:
+          - generic [ref=f3e37]:
+            - article [ref=f3e38]:
+              - link "مشاهده اثر تندیس در مه (Monolith in Mist)" [ref=f3e39] [cursor=pointer]:
+                - /url: /artworks/monolith-in-mist
+                - generic [ref=f3e40]:
+                  - img "سازه مینیمال بتنی در میان مه صبحگاهی و سکوت محیطی" [ref=f3e41]
+                  - generic [ref=f3e42]: "01"
+                  - generic [ref=f3e43]: ویدیو پیوست
+                - generic [ref=f3e46]:
+                  - generic [ref=f3e47]:
+                    - heading "تندیس در مه (Monolith in Mist)" [level=2] [ref=f3e48]
+                    - generic [ref=f3e49]: ۲۰۲۴
+                  - generic [ref=f3e50]:
+                    - generic [ref=f3e51]: معماری و اتمسفر
+                    - generic [ref=f3e52]:
+                      - text: جزئیات اثر
+                      - generic [ref=f3e53]: ←
+            - article [ref=f3e54]:
+              - link "مشاهده اثر طنین بتن خام (Echoes of Raw Concrete)" [ref=f3e55] [cursor=pointer]:
+                - /url: /artworks/echoes-of-raw-concrete
+                - generic [ref=f3e56]:
+                  - img "نمای نزدیک از تقاطع سطوح هندسی بتن خام در نور طبیعی" [ref=f3e57]
+                  - generic [ref=f3e58]: "02"
+                  - generic [ref=f3e59]: ویدیو پیوست
+                - generic [ref=f3e62]:
+                  - generic [ref=f3e63]:
+                    - heading "طنین بتن خام (Echoes of Raw Concrete)" [level=2] [ref=f3e64]
+                    - generic [ref=f3e65]: ۲۰۲۴
+                  - generic [ref=f3e66]:
+                    - generic [ref=f3e67]: هندسه فضایی
+                    - generic [ref=f3e68]:
+                      - text: جزئیات اثر
+                      - generic [ref=f3e69]: ←
+            - article [ref=f3e70]:
+              - link "مشاهده اثر پگاه گذرا (Ephemeral Dawn)" [ref=f3e71] [cursor=pointer]:
+                - /url: /artworks/ephemeral-dawn
+                - generic [ref=f3e72]:
+                  - img "پرتوهای عمودی نور آفتاب در فضایی آرام و مه‌آلود" [ref=f3e73]
+                  - generic [ref=f3e74]: "03"
+                  - generic [ref=f3e75]: ویدیو پیوست
+                - generic [ref=f3e78]:
+                  - generic [ref=f3e79]:
+                    - heading "پگاه گذرا (Ephemeral Dawn)" [level=2] [ref=f3e80]
+                    - generic [ref=f3e81]: ۲۰۲۳
+                  - generic [ref=f3e82]:
+                    - generic [ref=f3e83]: مطالعات نور
+                    - generic [ref=f3e84]:
+                      - text: جزئیات اثر
+                      - generic [ref=f3e85]: ←
+            - article [ref=f3e86]:
+              - link "مشاهده اثر نیمروز خاموش (Silent Meridian)" [ref=f3e87] [cursor=pointer]:
+                - /url: /artworks/silent-meridian
+                - generic [ref=f3e88]:
+                  - img "تیغه تپه شنی مینیمال با تضاد شدید نور و سایه خطی" [ref=f3e89]
+                  - generic [ref=f3e90]: "04"
+                  - generic [ref=f3e91]: ویدیو پیوست
+                - generic [ref=f3e94]:
+                  - generic [ref=f3e95]:
+                    - heading "نیمروز خاموش (Silent Meridian)" [level=2] [ref=f3e96]
+                    - generic [ref=f3e97]: ۲۰۲۴
+                  - generic [ref=f3e98]:
+                    - generic [ref=f3e99]: طبیعت انتزاعی
+                    - generic [ref=f3e100]:
+                      - text: جزئیات اثر
+                      - generic [ref=f3e101]: ←
+            - article [ref=f3e102]:
+              - link "مشاهده اثر تالار سایه‌ها (Chamber of Shadows)" [ref=f3e103] [cursor=pointer]:
+                - /url: /artworks/chamber-of-shadows
+                - generic [ref=f3e104]:
+                  - img "پرسپکتیو آسمان‌خراش مدرن با ریتم منظم سایه‌روشن شیشه‌ای" [ref=f3e105]
+                  - generic [ref=f3e106]: "05"
+                  - generic [ref=f3e107]: ویدیو پیوست
+                - generic [ref=f3e110]:
+                  - generic [ref=f3e111]:
+                    - heading "تالار سایه‌ها (Chamber of Shadows)" [level=2] [ref=f3e112]
+                    - generic [ref=f3e113]: ۲۰۲۳
+                  - generic [ref=f3e114]:
+                    - generic [ref=f3e115]: هندسه شهری
+                    - generic [ref=f3e116]:
+                      - text: جزئیات اثر
+                      - generic [ref=f3e117]: ←
+            - article [ref=f3e118]:
+              - link "مشاهده اثر آوند روشنایی (Vessel of Light)" [ref=f3e119] [cursor=pointer]:
+                - /url: /artworks/vessel-of-light
+                - generic [ref=f3e120]:
+                  - img "فضای داخلی مینیمال با نور طبیعی غیرمستقیم و لطیف" [ref=f3e121]
+                  - generic [ref=f3e122]: "06"
+                  - generic [ref=f3e123]: ویدیو پیوست
+                - generic [ref=f3e126]:
+                  - generic [ref=f3e127]:
+                    - heading "آوند روشنایی (Vessel of Light)" [level=2] [ref=f3e128]
+                    - generic [ref=f3e129]: ۲۰۲۴
+                  - generic [ref=f3e130]:
+                    - generic [ref=f3e131]: فضای درون
+                    - generic [ref=f3e132]:
+                      - text: جزئیات اثر
+                      - generic [ref=f3e133]: ←
+            - article [ref=f3e134]:
+              - link "مشاهده اثر حریم خاموشی (Perimeter of Silence)" [ref=f3e135] [cursor=pointer]:
+                - /url: /artworks/perimeter-of-silence
+                - generic [ref=f3e136]:
+                  - img "انعکاس کوهستان و مه روی سطح ساکن دریاچه در هوای ابری" [ref=f3e137]
+                  - generic [ref=f3e138]: "07"
+                  - generic [ref=f3e139]: ویدیو پیوست
+                - generic [ref=f3e142]:
+                  - generic [ref=f3e143]:
+                    - heading "حریم خاموشی (Perimeter of Silence)" [level=2] [ref=f3e144]
+                    - generic [ref=f3e145]: ۲۰۲۳
+                  - generic [ref=f3e146]:
+                    - generic [ref=f3e147]: منظر آبی
+                    - generic [ref=f3e148]:
+                      - text: جزئیات اثر
+                      - generic [ref=f3e149]: ←
+            - article [ref=f3e150]:
+              - link "مشاهده اثر ساعت نیلی (The Blue Hour)" [ref=f3e151] [cursor=pointer]:
+                - /url: /artworks/the-blue-hour
+                - generic [ref=f3e152]:
+                  - img "قله‌های برفی کوهستان در زیر گنبد نیلگون آسمان شب پر ستاره" [ref=f3e153]
+                  - generic [ref=f3e154]: "08"
+                  - generic [ref=f3e155]: ویدیو پیوست
+                - generic [ref=f3e158]:
+                  - generic [ref=f3e159]:
+                    - heading "ساعت نیلی (The Blue Hour)" [level=2] [ref=f3e160]
+                    - generic [ref=f3e161]: ۲۰۲۴
+                  - generic [ref=f3e162]:
+                    - generic [ref=f3e163]: آسمان شب و کوهستان
+                    - generic [ref=f3e164]:
+                      - text: جزئیات اثر
+                      - generic [ref=f3e165]: ←
+        - generic [ref=f3e166]:
+          - paragraph [ref=f3e167]: پایان گالری
+          - paragraph [ref=f3e168]: برای تجربه عمیق‌تر هر اثر و تماشای مستند ویدیویی مربوط به آن، روی تصویر دلخواه کلیک کنید.
+    - contentinfo [ref=f3e169]:
+      - generic [ref=f3e170]:
+        - generic [ref=f3e171]:
+          - generic [ref=f3e172]:
+            - generic [ref=f3e173]:
+              - generic [ref=f3e174]: Story Frame
+              - generic [ref=f3e175]: /
+              - generic [ref=f3e176]: پلتفرم نمایشگاه دیجیتال آثار چندرسانه‌ای
+            - paragraph [ref=f3e177]: ترکیبی از عکاسی با فرمت بزرگ، یادداشت‌های کیوریتوریال و ویدیوهای مستند پیرامون سکوت، نور و معماری فرم.
+          - generic [ref=f3e178]:
+            - link "گالری اصلی" [ref=f3e179] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f3e180]: ·
+            - generic [ref=f3e181]: ۸ اثر در آرشیو
+            - generic [ref=f3e182]: ·
+            - generic [ref=f3e183]: آماده جایگزینی داده‌های نهایی
+        - generic [ref=f3e185]:
+          - paragraph [ref=f3e186]: © تمامی حقوق آثار متعلق به استودیوهای تولیدکننده و کیوریتورهای مجموعه است.
+          - paragraph [ref=f3e187]: MINIMAL EXHIBITION ENGINE · NEXT.JS
+  - button "Open Next.js Dev Tools" [ref=f3e193] [cursor=pointer]
+  - alert [ref=f3e197]

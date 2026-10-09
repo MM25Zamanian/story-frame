@@ -1,0 +1,110 @@
+- generic [active] [ref=f4e1]:
+  - generic [ref=f4e2]:
+    - banner [ref=f4e3]:
+      - generic [ref=f4e4]:
+        - link "Story Frame — بازگشت به گالری" [ref=f4e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f4e8]:
+            - generic [ref=f4e9]: Story Frame
+            - generic [ref=f4e10]: استودیو نمایشگاه دیجیتال
+        - generic [ref=f4e11]:
+          - link "آثار (۸)" [ref=f4e12] [cursor=pointer]:
+            - /url: /
+          - button "Switch to dark mode" [ref=f4e15] [cursor=pointer]
+    - main [ref=f4e20]:
+      - generic [ref=f4e21]:
+        - navigation "مسیر راهنما" [ref=f4e22]:
+          - link "→ بازگشت به گالری آثار" [ref=f4e23] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f4e24]: →
+            - generic [ref=f4e25]: بازگشت به گالری آثار
+          - generic [ref=f4e26]:
+            - generic [ref=f4e27]: "01"
+            - generic [ref=f4e28]: /
+            - generic [ref=f4e29]: "08"
+        - article [ref=f4e30]:
+          - region "تصویر اصلی اثر" [ref=f4e31]:
+            - generic [ref=f4e32]:
+              - img "سازه مینیمال بتنی در میان مه صبحگاهی و سکوت محیطی" [ref=f4e33]
+              - button "مشاهده تصویر با وضوح اصلی و تمام‌صفحه" [ref=f4e34]:
+                - generic [ref=f4e37]: نمای تمام‌صفحه
+              - generic [ref=f4e38]: اثر شماره 01
+            - generic [ref=f4e39]:
+              - generic [ref=f4e40]: سازه مینیمال بتنی در میان مه صبحگاهی و سکوت محیطی
+              - generic [ref=f4e41]:
+                - generic [ref=f4e42]: "ابعاد: سلسله‌مراتب فضایی ۱۶:۹"
+                - generic [ref=f4e43]: "مدیوم: عکاسی معماری با فرمت متوسط و طراحی صوتی محیطی"
+          - region "عنوان و مشخصات اثر" [ref=f4e44]:
+            - generic [ref=f4e45]:
+              - generic [ref=f4e46]: معماری و اتمسفر
+              - heading "تندیس در مه (Monolith in Mist)" [level=1] [ref=f4e49]
+              - generic [ref=f4e50]:
+                - generic [ref=f4e51]:
+                  - generic [ref=f4e52]: "پدیدآور:"
+                  - generic [ref=f4e53]: استودیو فضا و سکوت
+                - generic [ref=f4e54]:
+                  - generic [ref=f4e55]: "سال خلق:"
+                  - generic [ref=f4e56]: ۲۰۲۴
+                - generic [ref=f4e57]:
+                  - generic [ref=f4e58]: "سلسله‌مراتب:"
+                  - generic [ref=f4e59]: سلسله‌مراتب فضایی ۱۶:۹
+          - region "توضیحات و بیانیه کیوریتور" [ref=f4e60]:
+            - generic [ref=f4e61]:
+              - paragraph [ref=f4e62]: «پژوهشی در مرز نامرئی میان ماده و فضا، جایی که مه هویت فرم را بازتعریف می‌کند.»
+              - generic [ref=f4e63]: — یادداشت کیوریتور نمایشگاه
+            - generic [ref=f4e64]:
+              - paragraph [ref=f4e65]: این اثر با تکیه بر سکوت حاکم بر سازه‌های بتنی در گرگ‌ومیش صبحگاهی خلق شده است. توده بتنی مونو‌لیت نه به عنوان سدی در برابر طبیعت، بلکه به مثابه تکیه‌گاهی آرام برای سکوت اطراف خود قامت برافراشته است.
+              - paragraph [ref=f4e66]: نور غیرمستقیم سحرگاهی با عبور از میان لایه‌های متراکم مه، لبه‌های تیز معماری را نرم کرده و دیالوگی مداوم میان زبری صلب سیمان و سیالیت اثیری بخار آب پدید می‌آورد. این قاب تلاشی است برای ثبت آن لحظهٔ نایاب که سازه انسانی با خاموشی کیهانی یگانه می‌شود.
+          - region "ویدیوی مرتبط" [ref=f4e67]:
+            - region [ref=f4e68]:
+              - generic [ref=f4e69]:
+                - generic [ref=f4e70]:
+                  - heading "ویدیوی مرتبط با اثر" [level=2] [ref=f4e71]
+                  - paragraph [ref=f4e72]: حرکت فرم در مه — ضبط محیطی
+                - generic [ref=f4e73]: "مدت: 00:15"
+              - generic [ref=f4e74]:
+                - generic [ref=f4e75]: مرورگر شما از پخش مستقیم ویدیو پشتیبانی نمی‌کند.
+                - button "پخش ویدیو" [ref=f4e76] [cursor=pointer]:
+                  - generic [ref=f4e80]: پخش اثر سینماتیک
+              - generic [ref=f4e81]:
+                - generic [ref=f4e82]: پخش جریانی با کیفیت بالا (Full HD / 1080p)
+                - generic [ref=f4e83]: صدا و تصویر همگام
+          - navigation "گردش در سایر آثار نمایشگاه" [ref=f4e84]:
+            - generic [ref=f4e85]:
+              - generic [ref=f4e86]: گردش در نمایشگاه
+              - link "مشاهده تمام آثار (۸)" [ref=f4e87] [cursor=pointer]:
+                - /url: /
+            - generic [ref=f4e88]:
+              - link "اثر قبلی ساعت نیلی (The Blue Hour) →" [ref=f4e89] [cursor=pointer]:
+                - /url: /artworks/the-blue-hour
+                - generic [ref=f4e90]:
+                  - generic [ref=f4e91]: اثر قبلی
+                  - generic [ref=f4e92]: ساعت نیلی (The Blue Hour)
+                - generic [ref=f4e93]: →
+              - link "← اثر بعدی طنین بتن خام (Echoes of Raw Concrete)" [ref=f4e94] [cursor=pointer]:
+                - /url: /artworks/echoes-of-raw-concrete
+                - generic [ref=f4e95]: ←
+                - generic [ref=f4e96]:
+                  - generic [ref=f4e97]: اثر بعدی
+                  - generic [ref=f4e98]: طنین بتن خام (Echoes of Raw Concrete)
+    - contentinfo [ref=f4e99]:
+      - generic [ref=f4e100]:
+        - generic [ref=f4e101]:
+          - generic [ref=f4e102]:
+            - generic [ref=f4e103]:
+              - generic [ref=f4e104]: Story Frame
+              - generic [ref=f4e105]: /
+              - generic [ref=f4e106]: پلتفرم نمایشگاه دیجیتال آثار چندرسانه‌ای
+            - paragraph [ref=f4e107]: ترکیبی از عکاسی با فرمت بزرگ، یادداشت‌های کیوریتوریال و ویدیوهای مستند پیرامون سکوت، نور و معماری فرم.
+          - generic [ref=f4e108]:
+            - link "گالری اصلی" [ref=f4e109] [cursor=pointer]:
+              - /url: /
+            - generic [ref=f4e110]: ·
+            - generic [ref=f4e111]: ۸ اثر در آرشیو
+            - generic [ref=f4e112]: ·
+            - generic [ref=f4e113]: آماده جایگزینی داده‌های نهایی
+        - generic [ref=f4e115]:
+          - paragraph [ref=f4e116]: © تمامی حقوق آثار متعلق به استودیوهای تولیدکننده و کیوریتورهای مجموعه است.
+          - paragraph [ref=f4e117]: MINIMAL EXHIBITION ENGINE · NEXT.JS
+  - button "Open Next.js Dev Tools" [ref=f4e123] [cursor=pointer]
+  - alert [ref=f4e127]

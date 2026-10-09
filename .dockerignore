@@ -1,0 +1,12 @@
+node_modules
+.next
+out
+.git
+.agents
+.heroui-docs
+.vscode
+.playwright-cli
+.playwright-mcp
+.taste
+*.png
+*.log
