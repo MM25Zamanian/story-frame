@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#fafafa" },
+    { media: "(prefers-color-scheme: light)", color: "#fbfbfa" },
     { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
   ],
 };
@@ -37,16 +37,18 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen text-[#141413] dark:text-[#EDEDEC] bg-[#FBFBFA] dark:bg-[#0A0A0A] font-sans antialiased selection:bg-[#111111] selection:text-white dark:selection:bg-white dark:selection:text-[#111111] transition-colors duration-200",
+          "min-h-screen text-foreground bg-background font-sans antialiased selection:bg-accent selection:text-accent-foreground transition-colors duration-200",
           fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "system" }}>
           <div className="relative flex flex-col min-h-screen">
             <SiteHeader />
+
             <main className="flex-1" id="main-content">
               {children}
             </main>
+
             <SiteFooter />
           </div>
         </Providers>

@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
 
 import { notFound } from "next/navigation";
-import Link from "next/link";
 
 import { ArtworkDetailView } from "./artwork-detail-view";
 
 import { artworks, getArtworkBySlug } from "@/data/artworks";
+
 type Props = { params: Promise<{ slug: string }> };
+
 export function generateStaticParams() {
   return artworks.map(({ slug }) => ({ slug }));
 }
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const artwork = getArtworkBySlug((await params).slug);
 
@@ -18,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: artwork?.summary.join(" "),
   };
 }
+
 export default async function ArtworkPage({ params }: Props) {
   const artwork = getArtworkBySlug((await params).slug);
 
@@ -25,10 +28,7 @@ export default async function ArtworkPage({ params }: Props) {
   const index = artworks.indexOf(artwork);
 
   return (
-    <div className="shell detail-shell">
-      <Link className="back-link" href="/">
-        → فهرست تابلوها
-      </Link>
+    <div className="shell py-4">
       <ArtworkDetailView
         key={artwork.id}
         artwork={artwork}

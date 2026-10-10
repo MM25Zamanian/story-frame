@@ -33,6 +33,8 @@ export const artworks: Artwork[] = [
       width: 5120,
       height: 3656,
       aspectRatio: "5120/3656",
+      blurDataURL:
+        "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASogABcAPzmEtVW5LqilN+gDICcJbACxHtpE5YwWxKGg8SxJMGnaiM109X3+OAD+2NpxWGp+D5DFdzR2uW47jwL4MDRcqfxdjPfd3OsYn/TIqYg680zy07wOVT9eG+Tpr1ORDyTDEuU8kkeQrV2PER3YFhT7dEou29TFL89XQ3bpiopOwVNJn5xon6HLG1gVseAinH+ys1Bw8kpMNzQkEObLGdmIAA==",
     },
   },
   {
@@ -69,6 +71,8 @@ export const artworks: Artwork[] = [
       width: 5120,
       height: 3656,
       aspectRatio: "5120/3656",
+      blurDataURL:
+        "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAQBQCdASogABcAP1WcwFg9M6smMBgIA6AqiWIAtRtVwM+uNSvJBB9AAFLWPI0XbDjQAPuRmwcTiQ45p7Ob0gSsKPSvJdqz5ih/jj0yH/mvWynN3o4zQmjBfLMJTHCtGTPDRsp078Qj/lKWT8vhjghNqD8wq7KWhU3OtIEpsBQ5FBQxCnsyjRQRBc/+0yhHvTf8nMU3d+EGAAAA",
     },
   },
   {
@@ -110,6 +114,8 @@ export const artworks: Artwork[] = [
       width: 5120,
       height: 3656,
       aspectRatio: "5120/3656",
+      blurDataURL:
+        "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASogABcAP1Wew1q9MywmqAqroCqJQBibBp00OnZZky+BnIYgAP7Y1yntIfy6LHQeeqVoO0W+KpTsEBEYYSm7xlHgzKBeLJaoFovIRfJYQjlmT0Z4H1rTL5kpCTuBWhhubeRPVk9CYOprogKcmAAAAA==",
     },
   },
   {
@@ -149,6 +155,8 @@ export const artworks: Artwork[] = [
       width: 5120,
       height: 3656,
       aspectRatio: "5120/3656",
+      blurDataURL:
+        "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACwBACdASogABcAP1Wcv1g9M6smMBgIA6AqiWldkYIQAAAP/daYJRkQuOwzxdjYAP7sPl0tl0NalXHNNap3rticnOcGArMyInF+ByTQ/KaxggEy2Ex8R13QtrzS0eQmJ5uRHjWvXxX/UPcdKDNZwOWvNHCZsbjSH/Wrp1l/4Ti0+NCwbhCvYnYp8MtJZa5FN/JP+WkLSdVNu5yteixqKXV+YcOxnbOcdovAgAAA",
     },
   },
   {
@@ -199,6 +207,8 @@ export const artworks: Artwork[] = [
       width: 5120,
       height: 3656,
       aspectRatio: "5120/3656",
+      blurDataURL:
+        "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBQCdASogABcAP0mSuFW7MiilMAwDYCkJYgDImCHe/REJ+46qE/DM3Nzyiu90iTTP1AgAAP7ZMbglJ+qJrp6V55/UoMsPZLH4j+zHsaWrGh6/dhozJMTFs0ovJ9DYhOiYPPSfyiQSd/DDVGB/hQdqkeilvxa1t5lLvtd26+1oxzAZePljsNWInJavoAAA",
     },
   },
   {
@@ -236,6 +246,8 @@ export const artworks: Artwork[] = [
       width: 5120,
       height: 3656,
       aspectRatio: "5120/3656",
+      blurDataURL:
+        "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABQBQCdASogABcAP1WWwFY9MqulsAgDoCqJbACxHtCEICxjS2bW7lcCNghYA8CK3mzLcwAA/qFEpLRR6oqj08n0OY4xkHzmB/lyttVNy+huKs2pZdwSvO/jAAXJwSsWjAa/hhqTiHs4eUl5Xe4qjJdi7fyZbuLYZlXLVGTRZMpxSfhlIbpPRADp2bNjFMoN8a2IMkzYizoc8WL7ryRgMaQAAAA=",
     },
   },
   {
@@ -291,6 +303,8 @@ export const artworks: Artwork[] = [
       width: 5120,
       height: 3656,
       aspectRatio: "5120/3656",
+      blurDataURL:
+        "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASogABcAP1WOwFW9L6ulMBgMA6AqiWwAvzg0SNMCpDgcalyN6rZ9XAD+694NWIBL2XFRLMicCmelPUiNjgy6VdY0y2UBpd724dUjb213sePLWtKtSsRnoxxGSosky72rjnr8OqCd69wG+i8lacW1vX9bTFMendX5ab5QUAAA",
     },
   },
   {
@@ -336,6 +350,8 @@ export const artworks: Artwork[] = [
       width: 5120,
       height: 3656,
       aspectRatio: "5120/3656",
+      blurDataURL:
+        "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBQCdASogABcAP0WOvVW7MSslMAwDYCiJZAC/OCHf5aOitL5KdiMkq7uWbtdNZSIAAP7ZDPwQCvSG5PebtMimHrR40GDHdvOwrRRsACqX4RNidkldCHsDlyofiCf7DCq+Qil/r5DiktfGU/xfNdxp1nTrvgMkXZBEB7tp5AA=",
     },
   },
 ];

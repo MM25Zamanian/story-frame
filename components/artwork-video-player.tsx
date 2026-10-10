@@ -103,26 +103,24 @@ export function ArtworkVideoPlayer({
   return (
     <section aria-labelledby="artwork-video-heading" className="w-full">
       {/* Video Section Header with HeroUI Chip */}
-      <div className="flex items-center justify-between mb-4 pb-3 border-b border-neutral-200/90 dark:border-neutral-800/90">
+      <div className="flex items-center justify-between mb-4 pb-3 border-b border-border">
         <div className="flex items-center gap-2 sm:gap-3">
-          <span className="w-2 h-2 rounded-none bg-neutral-900 dark:bg-neutral-100" />
+          <span className="w-2 h-2 rounded-none bg-foreground" />
           <h2
-            className="text-base sm:text-xl font-medium text-neutral-900 dark:text-neutral-100"
+            className="text-base sm:text-xl font-medium text-foreground"
             id="artwork-video-heading"
           >
             ویدیوی مرتبط با اثر
           </h2>
-          <span className="text-neutral-300 dark:text-neutral-700 hidden sm:inline">
-            |
-          </span>
-          <p className="text-xs text-neutral-500 dark:text-neutral-400 font-mono hidden sm:inline truncate max-w-xs">
+          <span className="text-border hidden sm:inline">|</span>
+          <p className="text-xs text-muted font-mono hidden sm:inline truncate max-w-xs">
             {video.title || `مستند تصویری «${artworkTitle}»`}
           </p>
         </div>
 
         {video.duration && (
           <Chip
-            className="text-[11px] font-mono rounded-none border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 tabular-nums"
+            className="text-[11px] font-mono rounded-none border border-border bg-surface tabular-nums"
             size="sm"
             variant="tertiary"
           >
@@ -134,7 +132,7 @@ export function ArtworkVideoPlayer({
       {/* Video Viewport Container */}
       <div
         ref={containerRef}
-        className="relative w-full aspect-video bg-[#0A0A0A] overflow-hidden border border-neutral-200/90 dark:border-neutral-800 select-none group rounded-none shadow-sm"
+        className="relative w-full aspect-video bg-black overflow-hidden border border-border select-none group rounded-none shadow-sm"
         onMouseMove={handleUserActivity}
         onTouchStart={handleUserActivity}
       >
@@ -178,7 +176,7 @@ export function ArtworkVideoPlayer({
             }}
           >
             <Button
-              className="w-16 h-16 sm:w-20 sm:h-20 rounded-none border border-white/60 bg-[#111111]/85 backdrop-blur-md text-white flex items-center justify-center p-0 transition-transform hover:scale-105 active:scale-95"
+              className="w-16 h-16 sm:w-20 sm:h-20 rounded-none border border-white/60 bg-black/85 backdrop-blur-md text-white flex items-center justify-center p-0 transition-transform hover:scale-105 active:scale-95"
               size="lg"
               variant="tertiary"
             >
@@ -272,7 +270,7 @@ export function ArtworkVideoPlayer({
       </div>
 
       {/* Video Colophon */}
-      <div className="mt-2.5 flex items-center justify-between text-[11px] text-neutral-400 dark:text-neutral-500 font-mono">
+      <div className="mt-2.5 flex items-center justify-between text-[11px] text-muted font-mono">
         <span>پخش جریانی استودیویی بدون افت کیفیت</span>
         <span>صدا و تصویر با کیفیت بالا</span>
       </div>
