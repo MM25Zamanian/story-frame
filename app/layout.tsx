@@ -5,7 +5,7 @@ import clsx from "clsx";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
-import { fontSans } from "@/config/fonts";
+import { fontSans, fontArabic } from "@/config/fonts";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
@@ -39,6 +39,7 @@ export default function RootLayout({
         className={clsx(
           "min-h-screen text-foreground bg-background font-sans antialiased selection:bg-accent selection:text-accent-foreground transition-colors duration-200",
           fontSans.variable,
+          fontArabic.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "system" }}>

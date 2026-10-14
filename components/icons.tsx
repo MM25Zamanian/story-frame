@@ -273,3 +273,50 @@ export const VolumeMuteIcon: React.FC<IconSvgProps> = ({
     <line x1="17" x2="23" y1="9" y2="15" />
   </svg>
 );
+
+export const CopyIcon: React.FC<IconSvgProps> = ({
+  size = 16,
+  width,
+  height,
+  className,
+  ...props
+}) => (
+  <svg
+    className={className}
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <rect height="13" rx="2" ry="2" width="13" x="9" y="9" />
+    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+  </svg>
+);
+
+export const CheckIcon: React.FC<IconSvgProps> = ({
+  size = 16,
+  width,
+  height,
+  className,
+  ...props
+}) => (
+  <svg
+    className={className}
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <polyline points="20 6 9 17 4 12" />
+  </svg>
+);

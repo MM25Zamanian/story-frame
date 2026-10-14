@@ -26,9 +26,9 @@ export function SiteHeader() {
         >
           <ExhibitionLogo className="text-accent shrink-0" size={28} />
           <span className="flex flex-col leading-tight">
-            <span>استوری فریم</span>
+            <span>قاب روایت</span>
             <small className="text-[11px] font-normal text-muted mt-0.5">
-              مرور تابلوهای مصور
+              تابلوهای مصور و سناریوهای صحنه
             </small>
           </span>
         </Link>
@@ -36,9 +36,9 @@ export function SiteHeader() {
         <div className="flex items-center gap-3.5 text-sm">
           <Link
             className="text-xs font-medium text-muted hover:text-accent transition-colors"
-            href="/#tableaus"
+            href="/"
           >
-            تابلوها
+            برنامه‌ها
           </Link>
           <div className="w-10 h-10 flex items-center justify-center">
             <ThemeSwitch />

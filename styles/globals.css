@@ -6,6 +6,7 @@
 @theme {
   --font-sans: var(--font-vazirmatn), system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-vazirmatn), monospace;
+  --font-arabic: var(--font-arabic-font), "Noto Naskh Arabic", "Traditional Arabic", serif;
 }
 
 /* HeroUI Semantic Color Palette -> Tailwind v4 Bridge */
