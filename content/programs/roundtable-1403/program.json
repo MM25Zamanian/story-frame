@@ -8,7 +8,14 @@
   "occasion": "فاطمیه",
   "type": "standalone",
   "formatTitle": "میز گرد",
-  "order": 3,
+  "order": 1,
+  "coverImage": {
+    "url": "/assets/roundtable-1403/cover.webp",
+    "alt": "میز گرد فاطمیه ۱۴۰۳ - فدک و عهد از یاد رفته",
+    "width": 1024,
+    "height": 731,
+    "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADQBACdASogABcAP1WUv1Y9MaulsAgDoCqJTGfIwtMkO0VYMYskMZbKaIeF64DEOAD+57/cdOJ7noiB/k4SylHJz065b7BUbVIAqGIqP8/N90EY5EWRTxHvmPl/VBt9hwVp3mG/7EzWJmDNmHlVS14byyyg2LqOZ1R+1cNV/mmKsxndRi2QJQ0wdnwp4CEnRQIRAAAA"
+  },
   "video": {
     "url": "",
     "title": "ویدئوی معرفی و شیوه اجرای میزگرد",
