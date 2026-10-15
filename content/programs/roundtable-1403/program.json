@@ -12,9 +12,10 @@
   "coverImage": {
     "url": "/assets/roundtable-1403/cover.webp",
     "alt": "میز گرد فاطمیه ۱۴۰۳ - فدک و عهد از یاد رفته",
-    "width": 1024,
-    "height": 731,
-    "blurDataURL": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADQBACdASogABcAP1WUv1Y9MaulsAgDoCqJTGfIwtMkO0VYMYskMZbKaIeF64DEOAD+57/cdOJ7noiB/k4SylHJz065b7BUbVIAqGIqP8/N90EY5EWRTxHvmPl/VBt9hwVp3mG/7EzWJmDNmHlVS14byyyg2LqOZ1R+1cNV/mmKsxndRi2QJQ0wdnwp4CEnRQIRAAAA"
+    "width": 960,
+    "height": 686,
+    "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAADQBACdASogABcAP1WUv1W9MaulMAgDoCqJTGfIwsv4O0VYMYskMZRyT7q71q+DAAD+57/cdOJ7noiB/k4Syk9U8/YBqhlto4OcY8p388nCBJtVsarTX3y17A73+M5/0gx7Nw0oXvrURP6Pt8WEauy70XwfHDJCs0IuD9o0UFGQck9aGMrYnCE4bKtDIq6FILnKnZeAAAA=",
+    "zoomUrl": "/assets/roundtable-1403/zoom/cover.webp"
   },
   "video": {
     "url": "",

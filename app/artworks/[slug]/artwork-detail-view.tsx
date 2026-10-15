@@ -230,7 +230,7 @@ export function ArtworkDetailView({
           className="block w-full max-w-[85vw] h-auto max-h-[75dvh] object-contain rounded-lg"
           height={artwork.image.height}
           placeholder={artwork.image.blurDataURL ? "blur" : "empty"}
-          src={artwork.image.url}
+          src={artwork.image.zoomUrl || artwork.image.url}
           width={artwork.image.width}
         />
       </dialog>

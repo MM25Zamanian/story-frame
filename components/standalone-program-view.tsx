@@ -269,7 +269,7 @@ function StandaloneLightbox({
         className="block w-full max-w-[85vw] h-auto max-h-[75dvh] object-contain rounded-lg"
         height={image.height || 900}
         placeholder={image.blurDataURL ? "blur" : "empty"}
-        src={image.url}
+        src={image.zoomUrl || image.url}
         width={image.width || 1200}
       />
     </dialog>

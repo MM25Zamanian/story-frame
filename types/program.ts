@@ -2,6 +2,7 @@ export type ProgramType = "series" | "standalone";
 
 export interface ProgramCover {
   url: string;
+  zoomUrl?: string;
   alt: string;
   width?: number;
   height?: number;
@@ -40,6 +41,7 @@ export interface ProgramItem {
   summary: string[]; // کلیدواژه‌های فشرده
   image?: {
     url: string;
+    zoomUrl?: string;
     alt: string;
     width: number;
     height: number;

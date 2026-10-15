@@ -29,12 +29,13 @@ export const artworks: Artwork[] = [
 با ما همراه باشین تا کمی بیشتر درباره قدرت دومینو و اثرات اون حرف بزنیم.`,
     image: {
       url: "/stories/01.webp",
+      zoomUrl: "/stories/zoom/01.webp",
       alt: "قربانی دومینوها نباش - چوب کبریت‌های در حال سوختن شبیه دومینو",
-      width: 5120,
-      height: 3656,
-      aspectRatio: "5120/3656",
+      width: 960,
+      height: 686,
+      aspectRatio: "960/686",
       blurDataURL:
-        "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASogABcAPzmEtVW5LqilN+gDICcJbACxHtpE5YwWxKGg8SxJMGnaiM109X3+OAD+2NpxWGp+D5DFdzR2uW47jwL4MDRcqfxdjPfd3OsYn/TIqYg680zy07wOVT9eG+Tpr1ORDyTDEuU8kkeQrV2PER3YFhT7dEou29TFL89XQ3bpiopOwVNJn5xon6HLG1gVseAinH+ys1Bw8kpMNzQkEObLGdmIAA==",
+        "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASogABcAPzmEtVW5LqilN+gDICcJbACxHtpE5YwWxKGg8SxMoIp2rG/fx+oiUAD+2NpxWGp+D5DFdzR2uW47jwL4MDRcqfxdjPfd3OsYn/TIjUhS/XFkWm0kCcWcdAcgfdvkkWa8CAoGLIbKgiid1jMrWkxurMXbepbhAuLDdAI1532/dozFDraIc8my9l7NUm700X3HzS2UVKidcMLUUn6hCfMAAA==",
     },
   },
   {
@@ -67,12 +68,13 @@ export const artworks: Artwork[] = [
 بله؛ گاهی اوقات می‌تونیم با یک اقدام کوچیک، مثل شاد کردن یک دوست یا کمک به یک نیازمند، جلوی یک‌سری اتفاقات ناخوشایند رو بگیریم و آینده‌ای بهتر برای دیگران بسازیم.`,
     image: {
       url: "/stories/02.webp",
+      zoomUrl: "/stories/zoom/02.webp",
       alt: "با دومینوهایت لبخند و امید بساز - قطعات چوبی دومینو چیده شده به شکل قلب",
-      width: 5120,
-      height: 3656,
-      aspectRatio: "5120/3656",
+      width: 960,
+      height: 686,
+      aspectRatio: "960/686",
       blurDataURL:
-        "data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAQBQCdASogABcAP1WcwFg9M6smMBgIA6AqiWIAtRtVwM+uNSvJBB9AAFLWPI0XbDjQAPuRmwcTiQ45p7Ob0gSsKPSvJdqz5ih/jj0yH/mvWynN3o4zQmjBfLMJTHCtGTPDRsp078Qj/lKWT8vhjghNqD8wq7KWhU3OtIEpsBQ5FBQxCnsyjRQRBc/+0yhHvTf8nMU3d+EGAAAA",
+        "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAAAQBQCdASogABcAP1WewFe9NKslsBgIA6AqiWIAtRtVwM+uNSvIf5QQ9eMKRjBlP8vgAPuRmwcTiQ45p7Ob0gSsKPSvJdqz5ih/jj0yH/mvWyogLZ2biJbloDL73iZUdxVBSny2RrcgSf8o6KNsMpYq8brdktep2S3vooMX3FfjDLaiediR9P6pDzoDepaeTZVG6ZIN1rxJul9o+jMAAA==",
     },
   },
   {
@@ -110,12 +112,13 @@ export const artworks: Artwork[] = [
 به همین سادگی، غایرخان از سر طمع، دومینویی رو در اُترار به راه انداخت که تبعاتش تمام ایران تا اروپا رو سال‌ها در بر گرفت و زندگی چندین نسل رو تباه کرد.`,
     image: {
       url: "/stories/03.webp",
+      zoomUrl: "/stories/zoom/03.webp",
       alt: "طمعی که دومینوی خون و آتش را به راه انداخت - سوارکار مغول در میدان جنگ",
-      width: 5120,
-      height: 3656,
-      aspectRatio: "5120/3656",
+      width: 960,
+      height: 686,
+      aspectRatio: "960/686",
       blurDataURL:
-        "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASogABcAP1Wew1q9MywmqAqroCqJQBibBp00OnZZky+BnIYgAP7Y1yntIfy6LHQeeqVoO0W+KpTsEBEYYSm7xlHgzKBeLJaoFovIRfJYQjlmT0Z4H1rTL5kpCTuBWhhubeRPVk9CYOprogKcmAAAAA==",
+        "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAAAwBACdASogABcAP1WcxFo9MiwmqAqroCqJQBibBp1HIMwL0VTG0BIx7IAA/tjXKe0eV1wmJdSNhTQ0H8vZlQ5rQfELg79Fg9nPixrTLrHcuP8U5bq3GYV3l+RH1cVM1v3wDmNLhl6lUgi90I8RHcCBiAAAAA==",
     },
   },
   {
@@ -151,12 +154,13 @@ export const artworks: Artwork[] = [
 به همین سادگی، چندتا کشور دیگه با هم وارد جنگ میشن و آتشش دامن ملت ما که تازه بی‌طرف هم بودن رو می‌گیره.`,
     image: {
       url: "/stories/04.webp",
+      zoomUrl: "/stories/zoom/04.webp",
       alt: "دومینوی فقر و قحطی، ارمغان جنگ‌های جهانی - قاشق و چنگال‌های فلزی کهنه روی زمینه تاریک",
-      width: 5120,
-      height: 3656,
-      aspectRatio: "5120/3656",
+      width: 960,
+      height: 686,
+      aspectRatio: "960/686",
       blurDataURL:
-        "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACwBACdASogABcAP1Wcv1g9M6smMBgIA6AqiWldkYIQAAAP/daYJRkQuOwzxdjYAP7sPl0tl0NalXHNNap3rticnOcGArMyInF+ByTQ/KaxggEy2Ex8R13QtrzS0eQmJ5uRHjWvXxX/UPcdKDNZwOWvNHCZsbjSH/Wrp1l/4Ti0+NCwbhCvYnYp8MtJZa5FN/JP+WkLSdVNu5yteixqKXV+YcOxnbOcdovAgAAA",
+        "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACQBACdASogABcAP1Wav1g9MysmMBgIA6AqiWldkYIQAAAP/a1vFvFbtq8WDhgA/uw+XS2XQ1qVcc01qneu2Jyc5wYCszIicX4HJNXS2aZp+wBrNQLrDVCnT36vkV0HOD/ta55t5KPY0Ld3PNc8RuPFADl4TQBHbiP4cQZypI2KMbmYDnS5kCPct6kKi6GmQTcW0Mvs5WZ3aUmCyFnUvK0LmB5aqFmi/XrwIAAA",
     },
   },
   {
@@ -203,12 +207,13 @@ export const artworks: Artwork[] = [
 با ما همراه باشید تا قهرمان بی‌نظیری رو به شما معرفی کنیم که یک‌تنه ایستاد تا روح انسانی و معنوی بشر برای تمام نسل‌ها باقی بماند.`,
     image: {
       url: "/stories/05.webp",
+      zoomUrl: "/stories/zoom/05.webp",
       alt: "قهرمان ایستادگی در برابر دومینوی سیاهی - دستی که جلوی افتادن دومینوها به سمت آتش را می‌گیرد",
-      width: 5120,
-      height: 3656,
-      aspectRatio: "5120/3656",
+      width: 960,
+      height: 686,
+      aspectRatio: "960/686",
       blurDataURL:
-        "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBQCdASogABcAP0mSuFW7MiilMAwDYCkJYgDImCHe/REJ+46qE/DM3Nzyiu90iTTP1AgAAP7ZMbglJ+qJrp6V55/UoMsPZLH4j+zHsaWrGh6/dhozJMTFs0ovJ9DYhOiYPPSfyiQSd/DDVGB/hQdqkeilvxa1t5lLvtd26+1oxzAZePljsNWInJavoAAA",
+        "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAAAQBQCdASogABcAP0mQt1W7MSilMAwDYCkJYgDImCHe/REJ+46qE/DM3IIspNqx+8EAAP7ZMbgUKA/RgYSzRGcHXdQSfJyY6ox6006ZEXu2HChCLLO/BIK+kD7zC4dLi2b2Rg0iTIDAs3cq7/xHFLL7i+6HqbqYUESmnlyZygOEkKX6rhI7S8f3GBvlzn2KFGnU/4qx2Z6OaJMAAAA=",
     },
   },
   {
@@ -242,12 +247,13 @@ export const artworks: Artwork[] = [
 اما یک نفر در برابر تلخ‌ترین و سیاه‌ترین دومینوی تاریخ ایستاد و اجازه نداد که توطئه‌های اونها اجرایی بشه و نور امامت در جامعه از بین بره، تا امروز ما در مسیر سعادت و هدایت قدم برداریم.`,
     image: {
       url: "/stories/06.webp",
+      zoomUrl: "/stories/zoom/06.webp",
       alt: "تلخ‌ترین دومینوی تاریخ - کتاب‌های کهنه تاریخی با رد خون و آتش",
-      width: 5120,
-      height: 3656,
-      aspectRatio: "5120/3656",
+      width: 960,
+      height: 686,
+      aspectRatio: "960/686",
       blurDataURL:
-        "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABQBQCdASogABcAP1WWwFY9MqulsAgDoCqJbACxHtCEICxjS2bW7lcCNghYA8CK3mzLcwAA/qFEpLRR6oqj08n0OY4xkHzmB/lyttVNy+huKs2pZdwSvO/jAAXJwSsWjAa/hhqTiHs4eUl5Xe4qjJdi7fyZbuLYZlXLVGTRZMpxSfhlIbpPRADp2bNjFMoN8a2IMkzYizoc8WL7ryRgMaQAAAA=",
+        "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBQCdASogABcAP1WcwFe9NCslsBgIA6AqiWwAtRegAt9N3R0a39KuhB167t+g+zAdGllAAP68ZG4eSwD2qL3VMrGzMLQKIAdrNEsoesHQmDYQ0i57YHb2vbi4llOisAbjjah4b7JUaiO2S+jajr8pAz7kmktzf+qefavfEZn5SAzpYeYy+eo5mRdbNnvQiEMCFtMIFmaN2fy891qqyZ0NVgA=",
     },
   },
   {
@@ -299,12 +305,13 @@ export const artworks: Artwork[] = [
 «سلام من رو تا قیامت به فرزندانم برسون.»`,
     image: {
       url: "/stories/07.webp",
+      zoomUrl: "/stories/zoom/07.webp",
       alt: "قهرمانی که در برابر دومینوی تباهی ایستاد - ایستادگی حضرت زهرا سلام‌الله‌علیها پشت در سوخته و آتشین",
-      width: 5120,
-      height: 3656,
-      aspectRatio: "5120/3656",
+      width: 960,
+      height: 686,
+      aspectRatio: "960/686",
       blurDataURL:
-        "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASogABcAP1WOwFW9L6ulMBgMA6AqiWwAvzg0SNMCpDgcalyN6rZ9XAD+694NWIBL2XFRLMicCmelPUiNjgy6VdY0y2UBpd724dUjb213sePLWtKtSsRnoxxGSosky72rjnr8OqCd69wG+i8lacW1vX9bTFMendX5ab5QUAAA",
+        "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAACQBACdASogABcAP1WMwVW9LqylMBgMA6AqiWwAvzg0SNMCpDgcallkCH1gUAAA/uveErywWZlaeCEYEMX++P0ZDscGXSrrGmWygNLvetA46JBhJB2sR0sa5+UifvPTClwYvtB/aQ6mW9vr8zWRQnKrZKiYaWD49V8CuHSIAAA=",
     },
   },
   {
@@ -346,12 +353,13 @@ export const artworks: Artwork[] = [
 بی‌تردید هر قدمی که ما رو به امام زمانمون نزدیک کنه، یک پاسخ به سلام مادر پهلوشکستمون و قدمی پیش به سوی ظهور خواهد بود، انشاءالله.`,
     image: {
       url: "/stories/08.webp",
+      zoomUrl: "/stories/zoom/08.webp",
       alt: "تو نیز بخشی از دومینوی ظهور باش - قاصدک رها شده در آسمان آبی و پرواز بذرهای امید",
-      width: 5120,
-      height: 3656,
-      aspectRatio: "5120/3656",
+      width: 960,
+      height: 686,
+      aspectRatio: "960/686",
       blurDataURL:
-        "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAAAQBQCdASogABcAP0WOvVW7MSslMAwDYCiJZAC/OCHf5aOitL5KdiMkq7uWbtdNZSIAAP7ZDPwQCvSG5PebtMimHrR40GDHdvOwrRRsACqX4RNidkldCHsDlyofiCf7DCq+Qil/r5DiktfGU/xfNdxp1nTrvgMkXZBEB7tp5AA=",
+        "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBQCdASogABcAP0WOvlW7MaulMAwDYCiJZgDCgCHf5aOitL5KdiMkq7uWbwxj1iqqAAD+2Qz8EAr0huT3m7TIph60qvK5MvfnI1BTY/OaFJve7ipwAp31DVUIjY0AzuHl8KDFRkO6ut1C0ZXFDdO4juiymVHDrYIoEAAA",
     },
   },
 ];

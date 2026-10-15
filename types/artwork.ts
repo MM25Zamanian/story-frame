@@ -1,5 +1,6 @@
 export interface ArtworkImage {
   url: string;
+  zoomUrl?: string;
   alt: string;
   width: number;
   height: number;
