@@ -7,7 +7,6 @@ import { Providers } from "./providers";
 import { siteConfig } from "@/config/site";
 import { fontSans, fontArabic } from "@/config/fonts";
 import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
 
 export const metadata: Metadata = {
   title: {
@@ -37,7 +36,7 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen text-foreground bg-background font-sans antialiased selection:bg-accent selection:text-accent-foreground transition-colors duration-200",
+          "min-h-screen text-foreground bg-background font-sans antialiased selection:bg-accent selection:text-accent-foreground",
           fontSans.variable,
           fontArabic.variable,
         )}
@@ -49,8 +48,6 @@ export default function RootLayout({
             <main className="flex-1" id="main-content">
               {children}
             </main>
-
-            <SiteFooter />
           </div>
         </Providers>
       </body>

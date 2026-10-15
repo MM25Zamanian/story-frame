@@ -1,48 +1,53 @@
-import Link from "next/link";
+"use client";
 
+import { useRouter, usePathname } from "next/navigation";
+import { Button } from "@heroui/react";
+
+import { ArrowRightIcon, HomeIcon } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
-import { ExhibitionLogo } from "@/components/icons";
-import { ProgressiveBlur } from "@/components/progressive-blur";
 
 export function SiteHeader() {
+  const router = useRouter();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const handleBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push("/");
+    }
+  };
+
   return (
-    <header className="sticky top-0 z-40 w-full isolate">
-      {/* Background layer with progressive blur separation instead of border */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 -z-10 overflow-hidden">
-        <div className="absolute z-20 inset-0 bg-linear-to-b from-background to-transparent" />
-
-        <ProgressiveBlur
-          blurLevels={[0.5, 2, 4, 8, 16, 24, 32, 64, 128]}
-          className="pointer-events-none"
-          height="100%"
-          position="top"
-        />
-      </div>
-
-      <div className="shell relative z-20 h-16 flex items-center justify-between">
-        <Link
-          className="flex items-center gap-2.5 text-base font-semibold text-foreground"
-          href="/"
+    <header className="sticky top-0 z-40 w-full isolate pt-2">
+      <div className="shell relative z-20 h-14 flex items-center justify-between">
+        {/* Back Button */}
+        <Button
+          isIconOnly
+          aria-label="بازگشت"
+          className="rounded-full shadow-2xs bg-background/50 backdrop-blur-2xl"
+          isDisabled={isHome}
+          size="md"
+          variant="outline"
+          onPress={handleBack}
         >
-          <ExhibitionLogo className="text-accent shrink-0" size={28} />
-          <span className="flex flex-col leading-tight">
-            <span>قاب روایت</span>
-            <small className="text-[11px] font-normal text-muted mt-0.5">
-              تابلوهای مصور و سناریوهای صحنه
-            </small>
-          </span>
-        </Link>
+          <ArrowRightIcon size={18} />
+        </Button>
 
-        <div className="flex items-center gap-3.5 text-sm">
-          <Link
-            className="text-xs font-medium text-muted hover:text-accent transition-colors"
-            href="/"
+        {/* End Actions: Theme Switch + Home Button */}
+        <div className="flex items-center gap-2">
+          <ThemeSwitch />
+          <Button
+            isIconOnly
+            aria-label="صفحه اصلی"
+            className="rounded-full shadow-2xs bg-background/50 backdrop-blur-2xl"
+            size="md"
+            variant="outline"
+            onPress={() => router.push("/")}
           >
-            برنامه‌ها
-          </Link>
-          <div className="w-10 h-10 flex items-center justify-center">
-            <ThemeSwitch />
-          </div>
+            <HomeIcon size={18} />
+          </Button>
         </div>
       </div>
     </header>

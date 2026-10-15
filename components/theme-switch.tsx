@@ -1,62 +1,60 @@
 "use client";
 
-import { FC, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import clsx from "clsx";
 
-import { SunIcon, MoonIcon } from "@/components/icons";
+import {
+  AnimatedThemeToggler,
+  type TransitionVariant,
+} from "@/components/ui/animated-theme-toggler";
+import { cn } from "@/lib/utils";
 
 export interface ThemeSwitchProps {
   className?: string;
+  variant?: TransitionVariant;
+  duration?: number;
+  easing?: string;
+  fromCenter?: boolean;
 }
 
-export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
-  const [isMounted, setIsMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
-
-  const isLight = resolvedTheme === "light";
-
-  const handleToggle = () => {
-    setTheme(isLight ? "dark" : "light");
-  };
+export function ThemeSwitch({
+  className,
+  variant,
+  duration = 1000,
+  easing,
+  fromCenter,
+}: ThemeSwitchProps) {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
-    setIsMounted(true);
+    setMounted(true);
   }, []);
 
-  if (!isMounted) {
+  if (!mounted) {
     return (
-      <div aria-hidden className="w-8 h-8 rounded-sm border border-border/50" />
+      <div
+        aria-hidden="true"
+        className="size-10 rounded-full border border-border bg-surface/80 shadow-2xs backdrop-blur-md"
+      />
     );
   }
 
   return (
-    <button
-      aria-label={`تغییر حالت به تم ${isLight ? "تاریک" : "روشن"}`}
-      className={clsx(
-        "group relative w-8 h-8 rounded-sm border border-border",
-        "bg-surface/80 backdrop-blur-sm",
-        "flex items-center justify-center text-muted",
-        "hover:text-foreground hover:border-muted",
-        "active:scale-95 transition-all duration-200 cursor-pointer",
-        "focus:outline-none focus-visible:ring-2 focus-visible:ring-focus",
+    <AnimatedThemeToggler
+      aria-label={`تغییر حالت به تم ${resolvedTheme === "dark" ? "روشن" : "تاریک"}`}
+      className={cn(
+        "rounded-full shadow-2xs backdrop-blur-md size-10 border border-border bg-surface/80 hover:bg-surface text-foreground inline-flex items-center justify-center cursor-pointer transition-transform duration-200 active:scale-95 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent",
         className,
       )}
-      title={isLight ? "تغییر به حالت تاریک" : "تغییر به حالت روشن"}
-      type="button"
-      onClick={handleToggle}
-    >
-      {isLight ? (
-        <MoonIcon
-          className="transition-transform group-hover:-rotate-12 duration-300"
-          size={15}
-        />
-      ) : (
-        <SunIcon
-          className="transition-transform group-hover:rotate-45 duration-300"
-          size={15}
-        />
-      )}
-    </button>
+      duration={duration}
+      easing={easing}
+      fromCenter={fromCenter}
+      theme={resolvedTheme === "dark" ? "dark" : "light"}
+      variant={variant}
+      onThemeChange={setTheme}
+    />
   );
-};
+}
+
+export { AnimatedThemeToggler };

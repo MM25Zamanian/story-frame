@@ -14,4 +14,3 @@ export const fontArabic = Noto_Naskh_Arabic({
 });
 
 export const fontMono = fontSans;
-

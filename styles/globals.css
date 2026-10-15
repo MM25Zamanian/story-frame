@@ -1,3 +1,5 @@
+@layer theme, base, components, utilities;
+
 @import "tailwindcss";
 @import "@heroui/styles";
 
@@ -9,83 +11,207 @@
   --font-arabic: var(--font-arabic-font), "Noto Naskh Arabic", "Traditional Arabic", serif;
 }
 
-/* HeroUI Semantic Color Palette -> Tailwind v4 Bridge */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-surface: var(--surface);
-  --color-surface-foreground: var(--surface-foreground);
-  --color-surface-secondary: var(--surface-secondary);
-  --color-overlay: var(--overlay);
-  --color-overlay-foreground: var(--overlay-foreground);
-  --color-muted: var(--muted);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-border: var(--border);
-  --color-separator: var(--separator);
-  --color-default: var(--default);
-  --color-default-foreground: var(--default-foreground);
-  --color-focus: var(--focus);
-  --color-link: var(--link);
-  --color-success: var(--success);
-  --color-warning: var(--warning);
-  --color-danger: var(--danger);
-}
+@layer theme {
+  /* HeroUI Common Primitives */
+  :root,
+  :host {
+    --radius-factor: 1;
+    --radius-base: 0.75rem;
+    --radius: calc(var(--radius-base) * var(--radius-factor));
+    --field-radius: calc(var(--radius) * 1.5);
+    --border-width: 1px;
+    --field-border-width: 1px;
+    --ring-offset-width: 2px;
+  }
 
-:root,
-.light,
-[data-theme="light"] {
-  color-scheme: light;
+  /* HeroUI Light Theme Variables */
+  :root,
+  .light,
+  .default,
+  [data-theme="light"],
+  [data-theme="default"],
+  :host(.light),
+  :host(.default),
+  :host([data-theme="light"]),
+  :host([data-theme="default"]) {
+    color-scheme: light;
 
-  /* HeroUI Semantic Palette - Light Theme */
-  --background: #fbfbfa;
-  --foreground: #141413;
-  --surface: #f0f2ed;
-  --surface-foreground: #141413;
-  --surface-secondary: #e5e8e1;
-  --overlay: #ffffff;
-  --overlay-foreground: #141413;
-  --muted: #62665f;
-  --accent: #287247;
-  --accent-foreground: #ffffff;
-  --border: #dce0d8;
-  --separator: #dce0d8;
-  --default: #edece8;
-  --default-foreground: #141413;
-  --focus: #287247;
-  --link: #287247;
-  --success: #1e7e34;
-  --warning: #b7791f;
-  --danger: #e53e3e;
-}
+    /* Base Colors */
+    --background: #fcfbf9;
+    --foreground: #141514;
 
-.dark,
-[data-theme="dark"] {
-  color-scheme: dark;
+    /* Surface */
+    --surface: #f4f3ef;
+    --surface-foreground: var(--foreground);
+    --surface-secondary: #ecebe5;
+    --surface-secondary-foreground: var(--foreground);
+    --surface-tertiary: #e3e2dc;
+    --surface-tertiary-foreground: var(--foreground);
 
-  /* HeroUI Semantic Palette - Dark Theme */
-  --background: #0a0a0a;
-  --foreground: #ededec;
-  --surface: #171c18;
-  --surface-foreground: #ededec;
-  --surface-secondary: #222923;
-  --overlay: #141714;
-  --overlay-foreground: #ededec;
-  --muted: #a4aca2;
-  --accent: #82c79a;
-  --accent-foreground: #102619;
-  --border: #303730;
-  --separator: #303730;
-  --default: #242924;
-  --default-foreground: #ededec;
-  --focus: #82c79a;
-  --link: #82c79a;
-  --success: #38a169;
-  --warning: #d69e2e;
-  --danger: #e53e3e;
+    /* Overlay */
+    --overlay: #ffffff;
+    --overlay-foreground: var(--foreground);
+
+    --muted: #575c55;
+
+    /* Neutrals / Default */
+    --default: #eeeee9;
+    --default-foreground: #141514;
+
+    /* Brand Accent */
+    --accent: #1c663c;
+    --accent-foreground: #ffffff;
+
+    /* Form Fields */
+    --field-background: var(--surface);
+    --field-foreground: var(--foreground);
+    --field-placeholder: var(--muted);
+    --field-border: var(--border);
+
+    /* Status Colors */
+    --success: #1b7a42;
+    --success-foreground: #ffffff;
+    --warning: #b45309;
+    --warning-foreground: #ffffff;
+    --danger: #dc2626;
+    --danger-foreground: #ffffff;
+
+    /* Component & Misc */
+    --segment: var(--white);
+    --segment-foreground: var(--foreground);
+    --border: #e2e4dd;
+    --separator: #e2e4dd;
+    --focus: var(--accent);
+    --link: var(--accent);
+    --backdrop: rgba(0, 0, 0, 0.4);
+
+    /* Calculated Colors */
+    --surface-hover: color-mix(in oklab, var(--surface) 92%, var(--surface-foreground) 8%);
+    --background-secondary: color-mix(in oklab, var(--background) 96%, var(--foreground) 4%);
+    --background-tertiary: color-mix(in oklab, var(--background) 92%, var(--foreground) 8%);
+    --background-inverse: var(--foreground);
+
+    --default-hover: color-mix(in oklab, var(--default) 92%, var(--default-foreground) 8%);
+    --accent-hover: color-mix(in oklab, var(--accent) 85%, #000 15%);
+    --success-hover: color-mix(in oklab, var(--success) 90%, var(--success-foreground) 10%);
+    --warning-hover: color-mix(in oklab, var(--warning) 90%, var(--warning-foreground) 10%);
+    --danger-hover: color-mix(in oklab, var(--danger) 90%, var(--danger-foreground) 10%);
+
+    --field-hover: color-mix(in oklab, var(--field-background) 95%, var(--field-foreground) 5%);
+    --field-focus: var(--surface);
+    --field-border-hover: var(--accent);
+    --field-border-focus: var(--accent);
+
+    --default-soft: color-mix(in oklab, var(--default) 50%, transparent);
+    --default-soft-foreground: var(--default-foreground);
+    --default-soft-hover: color-mix(in oklab, var(--default) 65%, transparent);
+
+    --accent-soft: color-mix(in oklab, var(--accent) 12%, transparent);
+    --accent-soft-foreground: var(--accent);
+    --accent-soft-hover: color-mix(in oklab, var(--accent) 18%, transparent);
+
+    --separator-secondary: color-mix(in oklab, var(--surface) 85%, var(--surface-foreground) 15%);
+    --separator-tertiary: color-mix(in oklab, var(--surface) 81%, var(--surface-foreground) 19%);
+
+    --border-secondary: color-mix(in oklab, var(--surface) 78%, var(--surface-foreground) 22%);
+    --border-tertiary: color-mix(in oklab, var(--surface) 66%, var(--surface-foreground) 34%);
+
+    --ambient-glow: rgba(28, 102, 60, 0.05);
+  }
+
+  /* HeroUI Dark Theme Variables */
+  .dark,
+  [data-theme="dark"],
+  :host(.dark),
+  :host([data-theme="dark"]) {
+    color-scheme: dark;
+
+    /* Base Colors */
+    --background: #090a09;
+    --foreground: #f4f5f3;
+
+    /* Surface */
+    --surface: #141715;
+    --surface-foreground: var(--foreground);
+    --surface-secondary: #1b201d;
+    --surface-secondary-foreground: var(--foreground);
+    --surface-tertiary: #242b26;
+    --surface-tertiary-foreground: var(--foreground);
+
+    /* Overlay */
+    --overlay: #181c19;
+    --overlay-foreground: var(--foreground);
+
+    --muted: #9da49b;
+
+    /* Neutrals / Default */
+    --default: #191e1b;
+    --default-foreground: #f4f5f3;
+
+    /* Brand Accent */
+    --accent: #34d399;
+    --accent-foreground: #051b11;
+
+    /* Form Fields */
+    --field-background: #141715;
+    --field-foreground: var(--foreground);
+    --field-placeholder: #6b7569;
+    --field-border: #232a25;
+
+    /* Status Colors */
+    --success: #34d399;
+    --success-foreground: #051b11;
+    --warning: #fbbf24;
+    --warning-foreground: #1c1202;
+    --danger: #f87171;
+    --danger-foreground: #1c0505;
+
+    /* Component & Misc */
+    --segment: #1b201d;
+    --segment-foreground: var(--foreground);
+    --border: #232a25;
+    --separator: #1f2521;
+    --focus: var(--accent);
+    --link: var(--accent);
+    --backdrop: rgba(0, 0, 0, 0.7);
+
+    /* Calculated Colors */
+    --surface-hover: color-mix(in oklab, var(--surface) 90%, var(--surface-foreground) 10%);
+    --background-secondary: color-mix(in oklab, var(--background) 96%, var(--foreground) 4%);
+    --background-tertiary: color-mix(in oklab, var(--background) 92%, var(--foreground) 8%);
+    --background-inverse: var(--foreground);
+
+    --default-hover: color-mix(in oklab, var(--default) 86%, var(--default-foreground) 14%);
+    --accent-hover: color-mix(in oklab, var(--accent) 85%, #fff 15%);
+    --success-hover: color-mix(in oklab, var(--success) 90%, #fff 10%);
+    --warning-hover: color-mix(in oklab, var(--warning) 90%, #fff 10%);
+    --danger-hover: color-mix(in oklab, var(--danger) 90%, #fff 10%);
+
+    --field-hover: color-mix(in oklab, var(--field-background) 90%, var(--field-foreground) 10%);
+    --field-focus: #141715;
+    --field-border-hover: var(--accent);
+    --field-border-focus: var(--accent);
+
+    --default-soft: color-mix(in oklab, var(--default) 50%, transparent);
+    --default-soft-foreground: var(--default-foreground);
+    --default-soft-hover: color-mix(in oklab, var(--default) 65%, transparent);
+
+    --accent-soft: color-mix(in oklab, var(--accent) 15%, transparent);
+    --accent-soft-foreground: var(--accent);
+    --accent-soft-hover: color-mix(in oklab, var(--accent) 22%, transparent);
+
+    --separator-secondary: color-mix(in oklab, var(--surface) 85%, var(--surface-foreground) 15%);
+    --separator-tertiary: color-mix(in oklab, var(--surface) 81%, var(--surface-foreground) 19%);
+
+    --border-secondary: color-mix(in oklab, var(--surface) 78%, var(--surface-foreground) 22%);
+    --border-tertiary: color-mix(in oklab, var(--surface) 66%, var(--surface-foreground) 34%);
+
+    --ambient-glow: rgba(52, 211, 153, 0.06);
+  }
 }
 
 html {
+  background-color: var(--background);
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -96,6 +222,17 @@ body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-vazirmatn), sans-serif !important;
+  min-height: 100dvh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image: radial-gradient(ellipse 70% 50% at 50% -10%, var(--ambient-glow), transparent 75%);
 }
 
 ::selection {
@@ -113,6 +250,104 @@ button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
+
+/* Progressive Enhancement: CSS Corner Shape (Superellipse)
+ * When supported by the browser, corners transition from circular arcs to high-end
+ * continuous-curvature superellipses (squircles). Radius scale is multiplied by 1.3
+ * to maintain optical balance, while pure circular elements (.rounded-full) remain round.
+ */
+/* @supports (corner-shape: superellipse(1.8)) {
+  :root,
+  :host {
+    --radius-factor: 1.3;
+  }
+
+  article,
+  section,
+  figure,
+  .rounded-2xl,
+  .rounded-3xl,
+  .rounded-xl,
+  .rounded-lg,
+  [data-corner="squircle"] {
+    corner-shape: superellipse(1.8);
+  }
+
+  .rounded-full,
+  [class*="rounded-full"] {
+    corner-shape: round !important;
+  }
+} */
+
+/* Animated Theme Toggler - View Transitions
+ * NOTE: HeroUI (@heroui/styles) sets `:root { view-transition-name: none; }` which completely
+ * breaks root view transitions. We explicitly restore `view-transition-name: root` and set
+ * the maximum z-index hierarchy so the transition layer stays above all UI elements.
+ */
+:root {
+  view-transition-name: root;
+}
+
+::view-transition {
+  z-index: 2147483647 !important;
+  pointer-events: none;
+}
+
+::view-transition-group(root) {
+  z-index: 2147483647 !important;
+  animation-duration: var(--magicui-theme-toggle-vt-duration, 1000ms);
+  animation-timing-function: var(--magicui-theme-toggle-vt-easing, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+::view-transition-image-pair(root) {
+  z-index: 2147483647 !important;
+  isolation: auto !important;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  will-change: clip-path;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+::view-transition-old(root) {
+  z-index: 1 !important;
+}
+
+::view-transition-new(root) {
+  z-index: 2147483647 !important;
+}
+
+/* Scoped to AnimatedThemeToggler — the toggler sets the data-attribute and the variable only during a theme toggle. */
+html[data-magicui-theme-vt="active"]::view-transition-group(root),
+html[data-magicui-theme-vt="locked"]::view-transition-group(root) {
+  animation-duration: var(--magicui-theme-toggle-vt-duration);
+  animation-timing-function: var(--magicui-theme-toggle-vt-easing, cubic-bezier(0.16, 1, 0.3, 1));
+}
+
+html[data-magicui-theme-vt="active"]::view-transition-new(root),
+html[data-magicui-theme-vt="locked"]::view-transition-new(root) {
+  clip-path: var(--magicui-theme-vt-clip-from);
+}
+
+html[data-magicui-theme-vt="locked"]::view-transition-group(root) {
+  animation-play-state: paused !important;
+}
+
+/* Zero-lag performance optimization:
+ * Disable all element CSS transitions while View Transition is active.
+ * Prevents main-thread style recalculation cascades and competing CSS color transitions
+ * so the GPU compositor can render the clip-path at full 60/120 FPS without dropped frames.
+ */
+html[data-magicui-theme-vt="active"] *,
+html[data-magicui-theme-vt="active"] *::before,
+html[data-magicui-theme-vt="active"] *::after {
+  transition: none !important;
+}
+
 
 /* Main Layout Shell - Mobile-First Frame (max-width: 480px) */
 .shell {

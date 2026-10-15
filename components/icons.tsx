@@ -201,6 +201,30 @@ export const ArrowRightIcon: React.FC<IconSvgProps> = ({
   </svg>
 );
 
+export const HomeIcon: React.FC<IconSvgProps> = ({
+  size = 18,
+  width,
+  height,
+  className,
+  ...props
+}) => (
+  <svg
+    className={className}
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M3 9.5L12 3l9 6.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9.5z" />
+    <polyline points="9 22 9 12 15 12 15 22" />
+  </svg>
+);
+
 export const ArrowLeftIcon: React.FC<IconSvgProps> = ({
   size = 18,
   width,
