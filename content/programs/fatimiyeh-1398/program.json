@@ -8,9 +8,10 @@
   "occasion": "فاطمیه",
   "type": "series",
   "formatTitle": "تابلو مصور",
-  "order": 1,
+  "order": 3,
   "coverImage": {
-    "url": "/stories/01.webp",
-    "alt": "تابلو مصور فاطمیه ۱۳۹۸ - تابلوهای دومینو"
+    "url": "/assets/fatimiyeh-1398/01.webp",
+    "alt": "تابلو مصور فاطمیه ۱۳۹۸ - تابلوهای دومینو",
+    "blurDataURL": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAwBQCdASogABcAPzmEtVW5LqilN+gDICcJbACxHtpE5YwWxKGg8SxJMGnaiM109X3+OAD+2NpxWGp+D5DFdzR2uW47jwL4MDRcqfxdjPfd3OsYn/TIqYg680zy07wOVT9eG+Tpr1ORDyTDEuU8kkeQrV2PER3YFhT7dEou29TFL89XQ3bpiopOwVNJn5xon6HLG1gVseAinH+ys1Bw8kpMNzQkEObLGdmIAA=="
   }
 }

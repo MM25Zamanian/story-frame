@@ -1,30 +1,30 @@
 {
   "01": {
-    "url": "/images/fatimiyeh-1401/01.webp",
+    "url": "/assets/fatimiyeh-1401/01.webp",
     "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwBACdASogABcAP1GSwFW8MaulMBgMA4AqCWkAAIsURIe+HoV4sHWXAH/0q/3JWYAA4PzdIHnMdBNFJuT93AIdJKN321Woxeaddcv+PF1wr9/cRhBM/InYNmytNZWcDY48wdKCldeKcnsRI0+1cK03px/ni9WWAiJmUkuaxyt0m6jygAA="
   },
   "02": {
-    "url": "/images/fatimiyeh-1401/02.webp",
+    "url": "/assets/fatimiyeh-1401/02.webp",
     "blurDataURL": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAADQBACdASogABcAP1WYv1W9MyulMAgDoCqJbACdM47ImjpQ8MP6QIlG/qhOuoTaAAD+vzrq7zcyFpq6FsF3nOO2Fn7Iyt/izObZNtTMerw6lxCl6WphjgMugCZf+ie6WJNV5alw32203aBVZRqnrAnPwVPz+yvf2bZXE9IHvZajRPIp2AYY4nzJ0N8abAGtx/XO4leOtbvD1DyLlyywqIAA"
   },
   "03": {
-    "url": "/images/fatimiyeh-1401/03.webp",
+    "url": "/assets/fatimiyeh-1401/03.webp",
     "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAADQBACdASogABcAP1Wcw1q9MiwmqAqroCqJYgC7MyGBIiZ+ch8MYbndXoCkntQcAAD+2SAs/HdNm11Y80/o8MXYoH7ks7PGq2e0cCE/xT9UfVkiHOModY3GgsC/BOH0Vu9ZVTsbFi2dGxvTKPw8tiASHgA="
   },
+  "04": {
+    "url": "/assets/fatimiyeh-1401/04.webp",
+    "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASogABcAP1WcxFo9MqwmqAqroCqJQAADTV2iS1hERhtdYZhNBajcWAD+PEDN+PPjWmW7Xt42ZbM5MF2sSYeTLYYGQmoX9EXT4ZA6gy+ce8f+TCaPvqXi5MiLBJuQzp0/I9Ycp5zHEhcdW4UXx2KNgOwtdguITnefyoAqg5oPzCkzoAAA"
+  },
   "05": {
-    "url": "/images/fatimiyeh-1401/05.webp",
+    "url": "/assets/fatimiyeh-1401/05.webp",
     "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABwBQCdASogABcAP1WYwli9MaumMBgIA6AqiWMAwNwwd+YnmPb6p48DA2iyWqpA2vuMtqkQAP7o76Q66lAN+6j0s+2MmBFescwjT19XiMhiMOKsqtnis2iB8Bp9orF4UeH/tJNUowZJJ+E2zaRuPzCllMefgAAA"
   },
   "06": {
-    "url": "/images/fatimiyeh-1401/06.webp",
+    "url": "/assets/fatimiyeh-1401/06.webp",
     "blurDataURL": "data:image/webp;base64,UklGRrIAAABXRUJQVlA4IKYAAABwBQCdASogABcAP1WSvlY9MSqlsAgDoCqJagCo9CG587uOFb3ZRlSpAoGhTKAVTiPQSV2QAP7jEB9pIbDJZGinjEMDgsM6aztVTqJvi1ZKHfb3P7zFKEnj8i+/NIjQOj4k1OhLS0hOTD7Du9gKBvcaPksX+CEXkdVFD0IDlCUzhLdGwkmeztk55+G/JGRGU8Bg4fz1MyYOjCXbs+YCIHiryhJ/AAAA"
   },
   "07": {
-    "url": "/images/fatimiyeh-1401/07.webp",
+    "url": "/assets/fatimiyeh-1401/07.webp",
     "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABQBQCdASogABcAP1WSu1a9MKmlsBgMA6AqiWwAxvR5yOBCooCn43e9uDHoz8nK9fioRAAA/lMKzSaOewdkuIsbKqh0U9Zb4BV9iTjLsicBV8ZDE8Yl6tfgau4uj7Y6/Dr1NMRtnvlBeJP6gWDLvI10S5jKyydeBoBGLmQAAAA="
-  },
-  "04": {
-    "url": "/images/fatimiyeh-1401/04.webp",
-    "blurDataURL": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACwBACdASogABcAP1Wcv1g9M6smMBgIA6AqiWldkYIQAAAP/daYJRkQuOwzxdjYAP7sPl0tl0NalXHNNap3rticnOcGArMyInF+ByTQ/KaxggEy2Ex8R13QtrzS0eQmJ5uRHjWvXxX/UPcdKDNZwOWvNHCZsbjSH/Wrp1l/4Ti0+NCwbhCvYnYp8MtJZa5FN/JP+WkLSdVNu5yteixqKXV+YcOxnbOcdovAgAAA"
   }
 }
