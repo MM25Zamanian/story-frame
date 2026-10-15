@@ -53,7 +53,7 @@ export default async function ProgramPage({ params }: Props) {
     if (!mdxContent) notFound();
 
     return (
-      <div className="shell py-6 pb-16">
+      <div className="w-full">
         <StandaloneProgramView program={program}>
           <MDXRenderer source={mdxContent} />
         </StandaloneProgramView>

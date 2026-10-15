@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { ProgressiveBlur } from "@/components/progressive-blur";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
 export function ArtworkCard({
   artwork,
@@ -41,18 +41,14 @@ export function ArtworkCard({
       />
 
       {/* Progressive Blur Layer */}
-      <ProgressiveBlur
-        blurLevels={[0.5, 2, 8, 16]}
-        className="pointer-events-none z-1"
-        height="70%"
-        position="bottom"
-      />
+
+      <ProgressiveBlur height="70%" position="bottom" />
 
       {/* Scrim Gradient Layer */}
-      <div className="absolute inset-0 bg-linear-to-t from-black via-black/35 to-transparent pointer-events-none z-2" />
+      <div className="absolute inset-0 bg-linear-to-t from-black via-black/35 to-transparent pointer-events-none z-20" />
 
       {/* Overlaid Content at Bottom */}
-      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 flex flex-col justify-end text-white text-right z-10">
+      <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5 flex flex-col justify-end text-white text-right z-30">
         {/* Title + Index Badge (Strictly Single Line, No Wrap) */}
         <div className="flex items-center gap-2 max-w-full">
           <h2 className="text-base sm:text-lg font-bold text-white tracking-tight truncate whitespace-nowrap flex-1">

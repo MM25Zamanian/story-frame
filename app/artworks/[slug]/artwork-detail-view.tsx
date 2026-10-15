@@ -1,14 +1,14 @@
 "use client";
+
 import type { Artwork } from "@/types/artwork";
 
+import React, { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
 import { Button } from "@heroui/react";
 
 import { Reveal } from "@/components/reveal";
-import { ProgressiveBlur } from "@/components/progressive-blur";
-import { ExpandIcon } from "@/components/icons";
+import { ImmersiveHeroBackdrop } from "@/components/immersive-hero-backdrop";
 
 export function ArtworkDetailView({
   artwork,
@@ -22,76 +22,59 @@ export function ArtworkDetailView({
   index: number;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
-  const [failed, setFailed] = useState(false);
+  const [videoFailed, setVideoFailed] = useState(false);
 
   return (
-    <article className="flex flex-col">
-      <div className="flex flex-col gap-6">
-        <Reveal entrance media>
-          <figure className="relative overflow-hidden rounded-2xl border border-border bg-surface shadow-sm">
-            <Image
-              priority
-              alt={artwork.image.alt}
-              blurDataURL={artwork.image.blurDataURL}
-              className="w-full h-auto object-cover"
-              height={artwork.image.height}
-              placeholder={artwork.image.blurDataURL ? "blur" : "empty"}
-              sizes="(max-width: 520px) 100vw, 480px"
-              src={artwork.image.url}
-              width={artwork.image.width}
-            />
+    <article className="relative flex flex-col pb-28">
+      {/* Layer 1: Immersive Sticky Hero Backdrop */}
+      <ImmersiveHeroBackdrop
+        alt={artwork.image.alt}
+        blurDataURL={artwork.image.blurDataURL}
+        height={artwork.image.height}
+        priority={true}
+        src={artwork.image.url}
+        width={artwork.image.width}
+        onExpand={() => dialog.current?.showModal()}
+      />
 
-            {/* Top-Left Blur Layer & Zoom Icon Trigger */}
-            {/* <ProgressiveBlur
-              className="pointer-events-none"
-              height="28%"
-              position="top"
-            /> */}
+      {/* Layer 2: Floating Content Sheet */}
+      <div className="relative z-10 -mt-[16vh] sm:-mt-[20vh] w-full px-0 sm:px-4">
+        <div className="w-full sm:max-w-[540px] mx-auto rounded-t-3xl border-t sm:border-x border-border/60 bg-surface/85 backdrop-blur-2xl shadow-2xl p-5 sm:p-7 min-h-[60vh] flex flex-col gap-6">
+          {/* Subtle Top Drag/Indicator Pill */}
+          <div
+            aria-hidden="true"
+            className="w-10 h-1 rounded-full bg-foreground/15 mx-auto -mt-1 mb-1"
+          />
 
-            <div className="absolute top-3 left-3 z-20">
-              <Button
-                aria-label="بزرگ‌نمایی تصویر"
-                className="w-10 h-10 min-w-10 rounded-full bg-background/80 hover:bg-background backdrop-blur-md border border-border text-foreground shadow-sm flex items-center justify-center p-0 transition-transform active:scale-95 cursor-pointer"
-                size="sm"
-                variant="tertiary"
-                onPress={() => dialog.current?.showModal()}
-              >
-                <ExpandIcon size={18} />
-              </Button>
-            </div>
-
-            {/* Bottom-Right Blur Layer & Artwork Title */}
-            <ProgressiveBlur
-              blurLevels={[1, 2, 8, 16]}
-              className="pointer-events-none"
-              height="50%"
-              position="bottom"
-            />
-
-            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-linear-to-tl from-foreground/50 to-50% to-transparent pointer-events-none" />
-
-            <div className="absolute inset-x-0 bottom-0 z-20 pt-10 pb-4 px-4 text-right">
-              <p className="text-sm font-black text-background mb-1 opacity-80">
+          {/* Sheet Header Peek Area */}
+          <header className="flex flex-col gap-2.5">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs font-bold text-accent bg-accent/10 px-2.5 py-0.5 rounded-full border border-accent/20">
                 تابلوی {(index + 1).toLocaleString("fa-IR")} از ۸
-              </p>
-              <h1 className="text-xl font-bold leading-tight text-background">
-                {artwork.title}
-              </h1>
+              </span>
+              <span className="text-[11px] text-muted">
+                مجموعه تابلوهای مصور
+              </span>
             </div>
-          </figure>
-        </Reveal>
 
-        <div className="flex flex-col gap-6">
+            <h1 className="text-xl sm:text-2xl font-bold leading-tight tracking-tight text-foreground">
+              {artwork.title}
+            </h1>
+          </header>
+
+          {/* Quick Section Navigation Links */}
           <nav
             aria-label="بخش‌های تابلو"
-            className="flex items-center gap-4 border-b border-border pb-2 text-xs font-medium"
+            className="flex items-center gap-4 border-b border-border/60 pb-2 text-xs font-medium"
           >
-            <a
-              className="min-h-[36px] flex items-center text-accent hover:underline"
-              href="#summary"
-            >
-              خلاصه سناریو
-            </a>
+            {artwork.summary && artwork.summary.length > 0 && (
+              <a
+                className="min-h-[36px] flex items-center text-accent hover:underline"
+                href="#summary"
+              >
+                خلاصه سناریو
+              </a>
+            )}
             <a
               className="min-h-[36px] flex items-center text-accent hover:underline"
               href="#full-text"
@@ -108,28 +91,36 @@ export function ArtworkDetailView({
             )}
           </nav>
 
-          <Reveal>
-            <section
-              className="bg-surface border border-accent rounded-xl p-5"
-              id="summary"
-            >
-              <p className="text-xs font-semibold text-accent mb-2">
-                کلید واژه های سناریو
-              </p>
-              <div className="flex flex-col gap-2">
-                {artwork.summary.map((s) => (
-                  <div key={s} className="relative pe-0 ps-4 text-xs">
-                    <span className="absolute right-0 top-1.5 w-2 h-1 rounded-full bg-accent" />
+          {/* Compressed Keywords / Scenario Summary */}
+          {artwork.summary && artwork.summary.length > 0 && (
+            <Reveal>
+              <section
+                className="bg-surface/70 border border-accent/40 rounded-2xl p-4 sm:p-5 shadow-2xs"
+                id="summary"
+              >
+                <p className="text-xs font-bold text-accent mb-2.5 flex items-center gap-1.5">
+                  <span>⚡</span>
+                  <span>کلید واژه‌های سناریو</span>
+                </p>
+                <div className="flex flex-col gap-2">
+                  {artwork.summary.map((s) => (
+                    <div
+                      key={s}
+                      className="relative pe-0 ps-4 text-xs leading-relaxed text-foreground/90"
+                    >
+                      <span className="absolute right-0 top-1.5 w-2 h-1 rounded-full bg-accent" />
+                      {s}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </Reveal>
+          )}
 
-                    {s}
-                  </div>
-                ))}
-              </div>
-            </section>
-          </Reveal>
-
+          {/* Full Text / Narrative */}
           <section className="pt-2" id="full-text">
-            <h2 className="text-base font-bold text-foreground mb-3">
+            <h2 className="text-base font-bold text-foreground mb-4 border-b border-border/70 pb-2 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-accent" />
               توضیحات و متن راوی
             </h2>
             <div className="space-y-4 text-[15px] leading-[2] text-foreground/90">
@@ -139,6 +130,7 @@ export function ArtworkDetailView({
             </div>
           </section>
 
+          {/* Video Section if available */}
           {artwork.video?.url && (
             <Reveal media>
               <section className="pt-2 flex flex-col gap-3" id="video">
@@ -154,10 +146,10 @@ export function ArtworkDetailView({
                   controls
                   playsInline
                   aria-label={"ویدیوی مرور " + artwork.title}
-                  className="w-full max-h-[480px] aspect-[4/5] object-cover bg-surface rounded-xl border border-border"
+                  className="w-full max-h-[480px] aspect-[4/5] object-cover bg-surface rounded-2xl border border-border"
                   poster={artwork.image.url}
                   preload="none"
-                  onError={() => setFailed(true)}
+                  onError={() => setVideoFailed(true)}
                 >
                   <source src={artwork.video.url} type="video/mp4" />
                   <track
@@ -167,7 +159,7 @@ export function ArtworkDetailView({
                     srcLang="fa"
                   />
                 </video>
-                {failed && (
+                {videoFailed && (
                   <p className="text-xs text-danger" role="alert">
                     ویدیو بارگذاری نشد.{" "}
                     <a
@@ -184,6 +176,7 @@ export function ArtworkDetailView({
         </div>
       </div>
 
+      {/* Floating Bottom Navigation */}
       <nav
         aria-label="مرور تابلوها"
         className="fixed bottom-0 inset-x-0 z-30 bg-background/95 backdrop-blur-md border-t border-border py-2.5 px-4 pb-[calc(0.625rem+env(safe-area-inset-bottom))]"
@@ -199,7 +192,7 @@ export function ArtworkDetailView({
             </span>
           </Link>
           <Link
-            className="text-[11px] text-muted hover:text-accent px-2.5 py-1 rounded-md bg-surface transition-colors shrink-0"
+            className="text-[11px] text-muted hover:text-accent px-3 py-1.5 rounded-md bg-surface border border-border transition-colors shrink-0"
             href="/"
           >
             فهرست تابلوها
@@ -216,10 +209,11 @@ export function ArtworkDetailView({
         </div>
       </nav>
 
+      {/* Zoom Lightbox Dialog */}
       <dialog
         ref={dialog}
         aria-label={artwork.title}
-        className="m-auto backdrop:bg-black/80 bg-background text-foreground p-4 border border-border rounded-2xl max-w-[95vw] max-h-[95dvh] shadow-2xl"
+        className="m-auto backdrop:bg-black/85 bg-background text-foreground p-4 border border-border rounded-2xl max-w-[95vw] max-h-[95dvh] shadow-2xl"
       >
         <div className="flex justify-end mb-2">
           <Button

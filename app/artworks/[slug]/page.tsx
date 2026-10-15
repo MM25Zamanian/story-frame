@@ -28,7 +28,7 @@ export default async function ArtworkPage({ params }: Props) {
   const index = artworks.indexOf(artwork);
 
   return (
-    <div className="shell py-4">
+    <div className="w-full">
       <ArtworkDetailView
         key={artwork.id}
         artwork={artwork}

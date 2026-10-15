@@ -52,7 +52,7 @@ export default async function ProgramItemPage({ params }: Props) {
   const nextItem = items[(index + 1) % items.length];
 
   return (
-    <div className="shell py-4">
+    <div className="w-full">
       <ProgramItemDetailView
         index={index}
         item={item}
