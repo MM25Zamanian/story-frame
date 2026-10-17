@@ -47,12 +47,18 @@ export default function HomePage() {
           const countLabel =
             program.type === "series"
               ? `${items.length.toLocaleString("fa-IR")} تابلوی روایی`
-              : program.summary?.length
-                ? `${program.summary.length.toLocaleString("fa-IR")} بخش تعاملی`
-                : "سناریوی تعاملی اجرا";
+              : program.downloads?.length
+                ? `${program.downloads.length.toLocaleString("fa-IR")} فایل دانلودی`
+                : program.summary?.length
+                  ? `${program.summary.length.toLocaleString("fa-IR")} بخش تعاملی`
+                  : "سناریوی تعاملی اجرا";
 
           const actionLabel =
-            program.type === "series" ? "مشاهده تابلوها" : "خوانش سناریو";
+            program.type === "series"
+              ? "مشاهده تابلوها"
+              : program.downloads?.length
+                ? "مشاهده و دانلود"
+                : "خوانش سناریو";
 
           return (
             <Reveal key={program.id} entrance={index < 3}>

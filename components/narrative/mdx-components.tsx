@@ -8,6 +8,7 @@ import {
   AudienceInteraction,
   Speech,
 } from "./stage-cue";
+import { DownloadSection } from "@/components/download-section";
 
 export const narrativeMDXComponents = {
   // Custom Specialized Domain Components
@@ -20,6 +21,8 @@ export const narrativeMDXComponents = {
   Pause: DramaticPause,
   AudienceInteraction,
   Speech,
+  DownloadSection,
+  DownloadFiles: DownloadSection,
 
   // Semantic Typography Enhancements
   h1: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (

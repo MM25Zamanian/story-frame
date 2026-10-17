@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Button } from "@heroui/react";
 
 import { Reveal } from "@/components/reveal";
+import { DownloadSection } from "@/components/download-section";
 import { ExpandIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 
@@ -108,9 +109,11 @@ function StandaloneHeader({
 /* -------------------------------------------------------------------------- */
 function StandaloneSectionNav({
   hasSummary,
+  hasDownloads,
   hasVideo,
 }: {
   hasSummary: boolean;
+  hasDownloads: boolean;
   hasVideo: boolean;
 }) {
   return (
@@ -130,8 +133,16 @@ function StandaloneSectionNav({
         className="min-h-[36px] flex items-center text-accent hover:underline"
         href="#full-script"
       >
-        روایت و متن سناریو
+        روایت و توضیحات
       </a>
+      {hasDownloads && (
+        <a
+          className="min-h-[36px] flex items-center text-accent hover:underline"
+          href="#downloads"
+        >
+          دانلود اسناد
+        </a>
+      )}
       {hasVideo && (
         <a
           className="min-h-[36px] flex items-center text-accent hover:underline"
@@ -317,6 +328,7 @@ export function StandaloneProgramView({
         />
 
         <StandaloneSectionNav
+          hasDownloads={Boolean(program.downloads && program.downloads.length > 0)}
           hasSummary={Boolean(program.summary && program.summary.length > 0)}
           hasVideo={Boolean(program.video?.url)}
         />
@@ -340,6 +352,11 @@ export function StandaloneProgramView({
         <section className="pt-2" id="full-script">
           {children}
         </section>
+
+        {/* Downloadable Documents & Presentations */}
+        {program.downloads && program.downloads.length > 0 && (
+          <DownloadSection downloads={program.downloads} />
+        )}
 
         {/* Bottom Back Button */}
         <div className="pt-6 border-t border-border/80 flex justify-center">

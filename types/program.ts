@@ -16,6 +16,17 @@ export interface ProgramVideo {
   duration?: string;
 }
 
+export interface ProgramDownloadItem {
+  id: string;
+  title: string;
+  subtitle?: string;
+  filename: string;
+  url: string;
+  format: "pdf" | "pptx" | "zip" | "other";
+  fileSize?: string;
+  pageCount?: string;
+}
+
 export interface Program {
   id: string;
   slug: string;
@@ -28,6 +39,7 @@ export interface Program {
   formatTitle: string; // e.g. "تابلو مصور", "میزگرد", "سمینار"
   coverImage?: ProgramCover;
   video?: ProgramVideo;
+  downloads?: ProgramDownloadItem[];
   summary?: string[]; // Compressed keywords for the overall program or execution
   order: number;
 }

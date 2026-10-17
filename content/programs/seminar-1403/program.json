@@ -1,0 +1,50 @@
+{
+  "id": "seminar-1403",
+  "slug": "seminar-1403",
+  "title": "سمینار فاطمیه ۱۴۰۳",
+  "subtitle": "اعتماد کن خوشبخت شو ۱۵ · نگرشی نو به سرمایه",
+  "description": "تبیین تحلیلی و فشرده ۸ سرمایه بنیادین زندگی، بازتعریف موقت بودن دنیا به عنوان ابزار آزمون الهی و نیکوکاری، و معرفی حضرت فاطمه زهرا (س) به عنوان برترین سرمایه‌ی سرمایه‌ها.",
+  "year": "۱۴۰۳",
+  "occasion": "فاطمیه",
+  "type": "standalone",
+  "formatTitle": "سمینار",
+  "order": 1,
+  "coverImage": {
+    "url": "/assets/seminar-1403/cover.webp",
+    "alt": "سمینار فاطمیه ۱۴۰۳ - اعتماد کن خوشبخت شو ۱۵",
+    "width": 960,
+    "height": 686,
+    "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAADwBACdASogABcAP1WUv1Y9MaulsAgDoCqJTGfIwtMkO0VYMYskPsMQMUnESkXXfsAA/ue/3HTie56Igf5OEspRyc9OuW+wVG1SAKhiKj/PzfdBGORFkZ4ioaltWolV1nMb4Z9jv4PVOZ3hp5/utKV+jUa+O3GFw7meohpwOEfS+i5u0Zc+mpmExxYw5naqgAA=",
+    "zoomUrl": "/assets/seminar-1403/zoom/cover.webp"
+  },
+  "downloads": [
+    {
+      "id": "booklet",
+      "title": "کتابچه همایش: اعتماد کن خوشبخت شو ۱۵",
+      "subtitle": "نگرشی نو به سرمایه و سیره اقتصادی-معنوی حضرت زهرا (س)",
+      "filename": "booklet-trust-and-be-happy-15.pdf",
+      "url": "/assets/seminar-1403/booklet-trust-and-be-happy-15.pdf",
+      "format": "pdf",
+      "fileSize": "۳۴ مگابایت",
+      "pageCount": "۲۸ صفحه"
+    },
+    {
+      "id": "presentation",
+      "title": "اسلایدهای ارائه: اعتماد کن خوشبخت شو ۱۵",
+      "subtitle": "فایل رسمی پرزنتیشن حاوی آیات، روایات و دسته‌بندی سرمایه‌ها",
+      "filename": "presentation-trust-and-be-happy-15.pptx",
+      "url": "/assets/seminar-1403/presentation-trust-and-be-happy-15.pptx",
+      "format": "pptx",
+      "fileSize": "۵۰ مگابایت",
+      "pageCount": "۵۴ اسلاید"
+    }
+  ],
+  "summary": [
+    "شناخت ۸ سرمایه بنیادین زندگی دنیا: زمان و عمر، دانش، خانواده، ارزش‌های اخلاقی، اعتبار، همکاران، ثروت، سلامت جسم و روان",
+    "نگرش توحیدی به دارایی‌ها: تمامی سرمایه‌ها «متاع موقت» و ابزار هستند، نه مقصد نهایی (سوره آل‌عمران، آیه ۱۴)",
+    "فلسفه آفرینش و سرمایه‌ها: آزمون الهی برای سنجش نیکوکارترین عملکرد در فاصله تولد تا مرگ (سوره مُلک، آیه ۲)",
+    "پاداش مدیریت صحیح سرمایه‌ها: پنج مزد ویژه در تفسیر آیه «لِّلَّذِينَ أَحْسَنُوا الْحُسْنَىٰ وَزِيَادَةٌ» (روایت امام باقر علیه‌السلام)",
+    "تنها راه تضمین‌شده بقای سرمایه: پیوند زدن داشته‌های فانی به رسالت نبوی و ولایت اهل‌بیت (ع)",
+    "حضرت فاطمه زهرا (سلام‌الله‌علیها): محور خلقت و برترین «سرمایه‌ی سرمایه‌ها»، و الگوی تمام‌عیار به‌کارگیری همه داشته‌ها در راه امام عصر (عج)"
+  ]
+}

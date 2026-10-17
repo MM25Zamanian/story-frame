@@ -344,3 +344,81 @@ export const CheckIcon: React.FC<IconSvgProps> = ({
     <polyline points="20 6 9 17 4 12" />
   </svg>
 );
+
+export const DownloadIcon: React.FC<IconSvgProps> = ({
+  size = 18,
+  width,
+  height,
+  className,
+  ...props
+}) => (
+  <svg
+    className={className}
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" x2="12" y1="15" y2="3" />
+  </svg>
+);
+
+export const PdfFileIcon: React.FC<IconSvgProps> = ({
+  size = 20,
+  width,
+  height,
+  className,
+  ...props
+}) => (
+  <svg
+    className={className}
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+    <polyline points="14 2 14 8 20 8" />
+    <path d="M9 13v4" />
+    <path d="M9 13h1.5a1.5 1.5 0 0 1 0 3H9" />
+  </svg>
+);
+
+export const PresentationFileIcon: React.FC<IconSvgProps> = ({
+  size = 20,
+  width,
+  height,
+  className,
+  ...props
+}) => (
+  <svg
+    className={className}
+    fill="none"
+    height={size || height}
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth="1.5"
+    viewBox="0 0 24 24"
+    width={size || width}
+    {...props}
+  >
+    <rect height="13" rx="2" width="18" x="3" y="3" />
+    <line x1="8" x2="8" y1="21" y2="16" />
+    <line x1="16" x2="16" y1="21" y2="16" />
+    <line x1="12" x2="12" y1="16" y2="21" />
+    <line x1="7" x2="17" y1="21" y2="21" />
+  </svg>
+);
