@@ -27,16 +27,41 @@ export interface ProgramDownloadItem {
   pageCount?: string;
 }
 
+export interface Category {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  formatTitle: string;
+  occasion: string;
+  order: number;
+  coverImage?: ProgramCover;
+}
+
+export type HomeEntry =
+  | {
+      type: "category";
+      category: Category;
+      programs: Program[];
+      count: number;
+    }
+  | {
+      type: "program";
+      program: Program;
+    };
+
 export interface Program {
   id: string;
   slug: string;
   title: string;
   subtitle?: string;
   description: string;
-  year: string;
+  year?: string;
   occasion: string; // e.g. "فاطمیه"
   type: ProgramType; // "series" for tableaux lists, "standalone" for roundtable/seminar
   formatTitle: string; // e.g. "تابلو مصور", "میزگرد", "سمینار"
+  categorySlug?: string;
   coverImage?: ProgramCover;
   video?: ProgramVideo;
   downloads?: ProgramDownloadItem[];

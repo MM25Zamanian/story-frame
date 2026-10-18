@@ -1,10 +1,10 @@
 import Link from "next/link";
 
-import { getAllPrograms, getProgramItems } from "@/lib/content";
+import { getHomeFeedEntries, getProgramItems } from "@/lib/content";
 import { Reveal } from "@/components/reveal";
 
 export default function HomePage() {
-  const programs = getAllPrograms();
+  const entries = getHomeFeedEntries();
 
   return (
     <div className="shell py-6 pb-20">
@@ -36,12 +36,81 @@ export default function HomePage() {
         </header>
       </Reveal>
 
-      {/* Symmetrical Program Cards Stream */}
+      {/* Symmetrical Feed Stream */}
       <section
-        aria-label="فهرست سناریوها و روایت‌ها"
+        aria-label="فهرست سناریوها و دسته‌بندی‌ها"
         className="flex flex-col gap-4"
       >
-        {programs.map((program, index) => {
+        {entries.map((entry, index) => {
+          if (entry.type === "category") {
+            const { category, count } = entry;
+            const countLabel = `${count.toLocaleString("fa-IR")} مجموعه روایی`;
+            const actionLabel = "مشاهده مجموعه‌ها";
+
+            return (
+              <Reveal key={`category-${category.id}`} entrance={index < 3}>
+                <article className="group relative rounded-2xl border border-border bg-surface/50 hover:bg-surface hover:border-accent/40 p-5 sm:p-6 transition-all duration-200 shadow-2xs">
+                  <Link
+                    className="block focus:outline-hidden"
+                    href={`/categories/${category.slug}`}
+                  >
+                    {/* Top Metadata Eyebrow */}
+                    <div className="flex items-center justify-between gap-2 mb-3">
+                      <div className="flex items-center gap-2">
+                        <span className="inline-flex items-center text-[11px] font-bold px-2 py-0.5 rounded-md bg-accent/10 text-accent border border-accent/20 whitespace-nowrap">
+                          مجموعه
+                        </span>
+                        <span className="text-border text-xs">/</span>
+                        <span className="text-xs font-bold text-accent whitespace-nowrap">
+                          {category.formatTitle}
+                        </span>
+                      </div>
+
+                      <span className="text-xs text-muted font-medium whitespace-nowrap">
+                        {category.occasion}
+                      </span>
+                    </div>
+
+                    {/* Category Title */}
+                    <h2 className="text-lg sm:text-xl font-bold tracking-tight text-foreground group-hover:text-accent transition-colors duration-200">
+                      {category.title}
+                    </h2>
+
+                    {/* Subtitle */}
+                    {category.subtitle && (
+                      <p className="text-xs sm:text-sm font-medium text-foreground/80 mt-1 truncate">
+                        {category.subtitle}
+                      </p>
+                    )}
+
+                    {/* Description */}
+                    <p className="text-xs sm:text-sm leading-relaxed text-muted mt-2 line-clamp-2">
+                      {category.description}
+                    </p>
+
+                    {/* Bottom Meta & Action Row */}
+                    <div className="flex items-center justify-between gap-3 mt-5">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="text-[11px] font-medium text-muted bg-surface-secondary px-2.5 py-1 rounded-full border border-border/60 whitespace-nowrap">
+                          {countLabel}
+                        </span>
+                      </div>
+
+                      <div className="inline-flex items-center gap-1.5 text-xs font-bold text-accent whitespace-nowrap">
+                        <span>{actionLabel}</span>
+                        <span className="text-base transition-transform duration-200 ease-out group-hover:-translate-x-1">
+                          ←
+                        </span>
+                      </div>
+                    </div>
+                  </Link>
+                </article>
+              </Reveal>
+            );
+          }
+
+          // Single Program Entry
+          const { program } = entry;
           const items =
             program.type === "series" ? getProgramItems(program.slug) : [];
           const countLabel =
@@ -61,19 +130,15 @@ export default function HomePage() {
                 : "خوانش سناریو";
 
           return (
-            <Reveal key={program.id} entrance={index < 3}>
+            <Reveal key={`program-${program.id}`} entrance={index < 3}>
               <article className="group relative rounded-2xl border border-border bg-surface/50 hover:bg-surface hover:border-accent/40 p-5 sm:p-6 transition-all duration-200 shadow-2xs">
                 <Link
                   className="block focus:outline-hidden"
                   href={`/${program.slug}`}
                 >
-                  {/* Top Metadata Eyebrow - 4-corner symmetry */}
+                  {/* Top Metadata Eyebrow */}
                   <div className="flex items-center justify-between gap-2 mb-3">
                     <div className="flex items-center gap-2">
-                      <span className="inline-flex items-center text-[11px] font-mono font-bold px-2 py-0.5 rounded-md bg-surface-secondary text-foreground border border-border/80 whitespace-nowrap">
-                        {program.year}
-                      </span>
-                      <span className="text-border text-xs">/</span>
                       <span className="text-xs font-bold text-accent whitespace-nowrap">
                         {program.formatTitle}
                       </span>
@@ -96,12 +161,12 @@ export default function HomePage() {
                     </p>
                   )}
 
-                  {/* Description / Summary */}
+                  {/* Description */}
                   <p className="text-xs sm:text-sm leading-relaxed text-muted mt-2 line-clamp-2">
                     {program.description}
                   </p>
 
-                  {/* Symmetrical Bottom Meta & Action Row */}
+                  {/* Bottom Meta & Action Row */}
                   <div className="flex items-center justify-between gap-3 mt-5">
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="text-[11px] font-medium text-muted bg-surface-secondary px-2.5 py-1 rounded-full border border-border/60 whitespace-nowrap">

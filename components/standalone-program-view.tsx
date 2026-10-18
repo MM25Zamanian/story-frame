@@ -69,13 +69,11 @@ function StandaloneHeader({
   subtitle,
   description,
   formatTitle,
-  year,
 }: {
   title: string;
   subtitle?: string;
   description: string;
   formatTitle: string;
-  year: string;
 }) {
   return (
     <header className="flex flex-col gap-3 border-b border-border/70 pb-5">
@@ -84,10 +82,10 @@ function StandaloneHeader({
           className="inline-flex items-center gap-1 text-xs text-muted hover:text-accent transition-colors"
           href="/"
         >
-          <span>← بازگشت به فهرست برنامه‌ها</span>
+          <span>← بازگشت به صفحه اصلی</span>
         </Link>
         <span className="text-xs font-semibold text-accent bg-accent/10 px-2.5 py-0.5 rounded-full border border-accent/20">
-          {formatTitle} · {year}
+          {formatTitle}
         </span>
       </div>
 
@@ -324,7 +322,6 @@ export function StandaloneProgramView({
           formatTitle={program.formatTitle}
           subtitle={program.subtitle}
           title={program.title}
-          year={program.year}
         />
 
         <StandaloneSectionNav

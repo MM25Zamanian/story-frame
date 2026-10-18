@@ -5,9 +5,12 @@ import Link from "next/link";
 
 import {
   getAllPrograms,
+  getCategoryBySlug,
   getProgramBySlug,
   getProgramItems,
+  getProgramsByCategory,
   getStandaloneContent,
+  SLUG_ALIASES,
 } from "@/lib/content";
 import { GalleryView } from "@/components/gallery-view";
 import { Reveal } from "@/components/reveal";
@@ -20,8 +23,13 @@ type Props = {
 
 export function generateStaticParams() {
   const programs = getAllPrograms();
+  const params = programs.map((p) => ({ programSlug: p.slug }));
 
-  return programs.map((p) => ({ programSlug: p.slug }));
+  for (const alias of Object.keys(SLUG_ALIASES)) {
+    params.push({ programSlug: alias });
+  }
+
+  return params;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -64,6 +72,20 @@ export default async function ProgramPage({ params }: Props) {
   // Series Program (e.g., Tableau Collections)
   const items = getProgramItems(programSlug);
 
+  const category = program.categorySlug
+    ? getCategoryBySlug(program.categorySlug)
+    : null;
+  const categoryCount = program.categorySlug
+    ? getProgramsByCategory(program.categorySlug).length
+    : 0;
+
+  const backHref =
+    category && categoryCount > 1 ? `/categories/${category.slug}` : "/";
+  const backLabel =
+    category && categoryCount > 1
+      ? `← بازگشت به ${category.title}`
+      : "← بازگشت به صفحه اصلی";
+
   return (
     <div className="shell py-6 pb-12">
       <Reveal entrance>
@@ -71,12 +93,12 @@ export default async function ProgramPage({ params }: Props) {
           <div className="flex items-center justify-between gap-2">
             <Link
               className="inline-flex items-center gap-1 text-xs text-muted hover:text-accent transition-colors"
-              href="/"
+              href={backHref}
             >
-              <span>← فهرست تمام برنامه‌ها</span>
+              <span>{backLabel}</span>
             </Link>
             <span className="text-xs font-semibold text-accent bg-accent/10 px-2.5 py-0.5 rounded-full border border-accent/20">
-              {program.formatTitle} · سال {program.year}
+              {program.formatTitle}
             </span>
           </div>
 

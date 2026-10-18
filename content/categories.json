@@ -1,0 +1,37 @@
+[
+  {
+    "id": "tableau",
+    "slug": "tableau",
+    "title": "تابلو مصور فاطمیه",
+    "subtitle": "سلسله روایت‌های تصویری و نمایشگاه‌های تعاملی",
+    "description": "مجموعه سناریوهای صحنه‌ای و تابلوهای مصور روایی پیرامون سیره، معارف و غربت اهل بیت (علیهم‌السلام) جهت بازخوانی، تدریس و اجرای زنده.",
+    "formatTitle": "تابلو مصور",
+    "occasion": "فاطمیه",
+    "order": 1,
+    "coverImage": {
+      "url": "/assets/fatimiyeh-1401/01.webp",
+      "alt": "تابلو مصور فاطمیه",
+      "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBQCdASogABcAP1GSwFW8MaulMBgMA4AqCWkAAIsWgLRiXgSTsvUq9vcyxz2AOhpAAOD83SB5zEvnI9gVyCB/nM63M18pTB3dEI4x46nkeRR4qyETwBTLkSPbSV5aStzTG17cyhVqNP5BZ8kB4+EhJqIGse89K4F+9w9wETZR/ixcryAAAA=="
+    }
+  },
+  {
+    "id": "roundtable",
+    "slug": "roundtable",
+    "title": "میزگرد فاطمیه",
+    "subtitle": "سناریوی تفصیلی میزگرد تعاملی",
+    "description": "سناریوی تفصیلی میزگرد تعاملی پیرامون حق و کرامت، ماجرای غصب فدک، خطبه فدکیه، و پیوند عمیق آن با غربت امام زمان (عج).",
+    "formatTitle": "میزگرد",
+    "occasion": "فاطمیه",
+    "order": 2
+  },
+  {
+    "id": "seminar",
+    "slug": "seminar",
+    "title": "سمینار فاطمیه",
+    "subtitle": "همایش و گفتار تحلیلی تخصصی",
+    "description": "تبیین تحلیلی و فشرده ۸ سرمایه بنیادین زندگی و معرفی حضرت فاطمه زهرا (س) به عنوان برترین سرمایه‌ی سرمایه‌ها همراه با فایل‌های ارائه و کتابچه.",
+    "formatTitle": "سمینار",
+    "occasion": "فاطمیه",
+    "order": 3
+  }
+]

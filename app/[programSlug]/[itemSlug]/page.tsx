@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 
 import { notFound } from "next/navigation";
 
-import { getAllPrograms, getProgramItems, getProgramItem } from "@/lib/content";
+import {
+  getAllPrograms,
+  getProgramItems,
+  getProgramItem,
+  SLUG_ALIASES,
+} from "@/lib/content";
 import { ProgramItemDetailView } from "@/components/program-item-detail";
 import { MDXRenderer } from "@/components/narrative/mdx-renderer";
 
@@ -20,6 +25,18 @@ export function generateStaticParams() {
     for (const item of items) {
       params.push({
         programSlug: prog.slug,
+        itemSlug: item.slug,
+      });
+    }
+  }
+
+  // Also support alias routes for backward compatibility
+  for (const [alias, target] of Object.entries(SLUG_ALIASES)) {
+    const items = getProgramItems(target);
+
+    for (const item of items) {
+      params.push({
+        programSlug: alias,
         itemSlug: item.slug,
       });
     }
