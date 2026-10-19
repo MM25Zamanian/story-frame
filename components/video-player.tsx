@@ -147,7 +147,6 @@ export function VideoPlayer({
           <DefaultVideoLayout
             icons={defaultLayoutIcons}
             noAudioGain={true}
-            translations={farsiTranslations}
             slots={{
               airPlayButton: null,
               googleCastButton: null,
@@ -155,6 +154,7 @@ export function VideoPlayer({
               captionButton: null,
             }}
             smallLayoutWhen={({ width }) => width < 576}
+            translations={farsiTranslations}
           />
         </MediaPlayer>
       </div>

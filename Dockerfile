@@ -20,5 +20,12 @@ RUN npx next build
 # Stage 2: Production static origin using pinned ghcr.io/gecut/nginx/cdn:2.0.0
 FROM ghcr.io/gecut/nginx/cdn:2.0.0
 
+# Copy Level 2 NGINX templates (cache policy map & media streaming configuration)
+COPY nginx/templates/ /etc/nginx/templates/
+
+# Default cache policy for media streaming assets (1 year immutable edge cache)
+ENV NGINX_CDN_CACHE_MEDIA="public, max-age=31536000, immutable" \
+    NGINX_CDN_MEDIA_S_MAXAGE="31536000"
+
 # Copy static export output into /data with correct nginx worker ownership
 COPY --chown=nginx:nginx --from=builder /app/out /data/

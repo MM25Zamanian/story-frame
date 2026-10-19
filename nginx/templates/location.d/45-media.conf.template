@@ -1,0 +1,21 @@
+# ==============================================================================
+# NGINX CDN Level 2 Customization - Media Streaming Location
+# Image: ghcr.io/gecut/nginx/cdn:2.0.0
+# ==============================================================================
+
+location ~* \.(?:mp4|webm|ogv|m4v|m4a|mp3|wav|ogg|flac|aac)$ {
+  # Disable compression so byte-range requests and Accept-Ranges work reliably
+  gzip off;
+  gzip_static off;
+
+  # Zero-copy kernel sendfile with chunk limit to prevent worker starvation
+  sendfile on;
+  sendfile_max_chunk 1m;
+  tcp_nopush on;
+  tcp_nodelay on;
+
+  # Inherit root security and CORS controls
+  include /etc/nginx/conf.d/location.d/root.d/*.conf;
+
+  try_files $uri =404;
+}

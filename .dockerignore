@@ -8,5 +8,7 @@ out
 .playwright-cli
 .playwright-mcp
 .taste
-*.png
+/*.png
+!public/**/*.png
+!public/*.png
 *.log
