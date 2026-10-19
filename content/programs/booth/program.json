@@ -1,0 +1,39 @@
+{
+  "id": "booth",
+  "slug": "booth",
+  "title": "غرفه‌ای فاطمیه",
+  "subtitle": "روایت غرفه‌ها و اثر تماشاگر",
+  "description": "سناریوی تفصیلی غرفه‌های روایی فاطمیه؛ بررسی اثر تماشاگر، داستان لباس پادشاه و پیوند آن با مظلومیت حضرت زهرا (س) و امام زمان (عج).",
+  "occasion": "فاطمیه",
+  "type": "standalone",
+  "formatTitle": "غرفه‌ای",
+  "categorySlug": "booth",
+  "order": 4,
+  "coverImage": {
+    "url": "/assets/booth-1403/cover.webp",
+    "alt": "غرفه‌ای فاطمیه - سناریو و مستند تصویری",
+    "width": 960,
+    "height": 686,
+    "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADQBACdASogABcAP1WewVs9MysmqAqroCqJQBWGZfgvBhYXK09dx57+hfWgP0atQADiTuGkU0yziJXMOOW4dAZgDBh+Khb5NQuXfwho+6xALTRSFLH3ZmSQtKHNycuw6Tjn0vEb6ChmIyQbMhfnZ4mHGBDAfGAJR42TJXMIAUsYyxnQEGv5YizcwuysSj7UdKGAAA==",
+    "zoomUrl": "/assets/booth-1403/zoom/cover.webp"
+  },
+  "video": {
+    "title": "مستند تصویری و راهنمای اجرای غرفه‌ای فاطمیه",
+    "duration": "۵ دقیقه و ۳۴ ثانیه",
+    "poster": "/assets/booth-1403/cover.webp",
+    "placement": "inline",
+    "sources": [
+      {
+        "src": "/assets/booth-1403/1405-07-26_15.11.55_optimized_hevc.mp4",
+        "type": "video/mp4; codecs=\"hvc1\"",
+        "quality": "1080p HEVC"
+      },
+      {
+        "src": "/assets/booth-1403/1405-07-26_15.11.55_optimized_web_720p.mp4",
+        "type": "video/mp4; codecs=\"avc1\"",
+        "quality": "720p Web"
+      }
+    ],
+    "url": "/assets/booth-1403/1405-07-26_15.11.55_optimized_web_720p.mp4"
+  }
+}

@@ -394,3 +394,64 @@ input[type="range"]::-webkit-slider-thumb {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   Vidstack Video Player Custom Persian Styling & Polish
+   ========================================================================== */
+.vds-video-layout {
+  --media-font-family: var(--font-vazirmatn), system-ui, -apple-system, sans-serif;
+  --media-brand: var(--accent);
+  --media-focus-ring: 0 0 0 2px var(--accent);
+  --media-menu-border-radius: 14px;
+  --media-menu-bg: rgba(18, 18, 18, 0.88);
+  --media-tooltip-border-radius: 8px;
+  --media-tooltip-bg-color: rgba(18, 18, 18, 0.92);
+  --media-tooltip-font-size: 12px;
+}
+
+/* Glassmorphism & RTL layout for Vidstack menus */
+.vds-menu-items {
+  direction: rtl;
+  text-align: right;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(18, 18, 18, 0.88) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Direction chevron adjustments for RTL navigation */
+.vds-menu-items .vds-menu-open-icon,
+.vds-menu-items .vds-menu-close-icon {
+  transform: scaleX(-1);
+}
+
+/* Tooltip typography */
+.vds-tooltip-content {
+  font-family: var(--font-vazirmatn), system-ui, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Keep timeline slider strictly LTR and numeric */
+.vds-time-slider,
+.vds-time {
+  direction: ltr;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tabular numbers in hints and speed menu */
+.vds-menu-item-hint,
+.vds-radio-hint {
+  direction: ltr;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Simplify settings: hide technical accessibility section to keep menu focused */
+.vds-accessibility-menu {
+  display: none !important;
+}
+

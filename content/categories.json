@@ -33,5 +33,20 @@
     "formatTitle": "سمینار",
     "occasion": "فاطمیه",
     "order": 3
+  },
+  {
+    "id": "booth",
+    "slug": "booth",
+    "title": "غرفه‌ای فاطمیه",
+    "subtitle": "روایت غرفه‌ها و اثر تماشاگر",
+    "description": "سناریوی تفصیلی غرفه‌های روایی فاطمیه؛ بررسی اثر تماشاگر، داستان لباس پادشاه و پیوند آن با مظلومیت حضرت زهرا (س) و امام زمان (عج).",
+    "formatTitle": "غرفه‌ای",
+    "occasion": "فاطمیه",
+    "order": 4,
+    "coverImage": {
+      "url": "/assets/booth-1403/cover.webp",
+      "alt": "غرفه‌ای فاطمیه",
+      "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADQBACdASogABcAP1WewVs9MysmqAqroCqJQBWGZfgvBhYXK09dx57+hfWgP0atQADiTuGkU0yziJXMOOW4dAZgDBh+Khb5NQuXfwho+6xALTRSFLH3ZmSQtKHNycuw6Tjn0vEb6ChmIyQbMhfnZ4mHGBDAfGAJR42TJXMIAUsYyxnQEGv5YizcwuysSj7UdKGAAA=="
+    }
   }
 ]

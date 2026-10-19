@@ -13,6 +13,7 @@
 	"dependencies": {
 		"@heroui/react": "3.2.6",
 		"@heroui/styles": "3.2.6",
+		"@vidstack/react": "^1.15.7",
 		"clsx": "2.1.1",
 		"gray-matter": "^4.0.3",
 		"intl-messageformat": "10.7.18",

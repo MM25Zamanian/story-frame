@@ -1,0 +1,27 @@
+{
+  "cover": {
+    "url": "/assets/booth-1403/cover.webp",
+    "zoomUrl": "/assets/booth-1403/zoom/cover.webp",
+    "width": 960,
+    "height": 686,
+    "zoomWidth": 1024,
+    "zoomHeight": 731,
+    "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADQBACdASogABcAP1WewVs9MysmqAqroCqJQBWGZfgvBhYXK09dx57+hfWgP0atQADiTuGkU0yziJXMOOW4dAZgDBh+Khb5NQuXfwho+6xALTRSFLH3ZmSQtKHNycuw6Tjn0vEb6ChmIyQbMhfnZ4mHGBDAfGAJR42TJXMIAUsYyxnQEGv5YizcwuysSj7UdKGAAA=="
+  },
+  "video": {
+    "sources": [
+      {
+        "src": "/assets/booth-1403/1405-07-26_15.11.55_optimized_hevc.mp4",
+        "type": "video/mp4; codecs=\"hvc1\"",
+        "quality": "1080p HEVC"
+      },
+      {
+        "src": "/assets/booth-1403/1405-07-26_15.11.55_optimized_web_720p.mp4",
+        "type": "video/mp4; codecs=\"avc1\"",
+        "quality": "720p Web"
+      }
+    ],
+    "duration": "۵ دقیقه و ۳۴ ثانیه",
+    "durationSeconds": 334
+  }
+}

@@ -8,7 +8,40 @@ import {
   AudienceInteraction,
   Speech,
 } from "./stage-cue";
+
 import { DownloadSection } from "@/components/download-section";
+import { VideoPlayer } from "@/components/video-player";
+
+export function BoothVideo() {
+  const videoData = {
+    title: "مستند تصویری و راهنمای اجرای غرفه‌ای فاطمیه",
+    duration: "۵ دقیقه و ۳۴ ثانیه",
+    poster: "/assets/booth-1403/cover.webp",
+    sources: [
+      {
+        src: "/assets/booth-1403/1405-07-26_15.11.55_optimized_hevc.mp4",
+        type: 'video/mp4; codecs="hvc1"',
+        quality: "1080p HEVC",
+      },
+      {
+        src: "/assets/booth-1403/1405-07-26_15.11.55_optimized_web_720p.mp4",
+        type: 'video/mp4; codecs="avc1"',
+        quality: "720p Web",
+      },
+    ],
+    url: "/assets/booth-1403/1405-07-26_15.11.55_optimized_web_720p.mp4",
+  };
+
+  return (
+    <div className="my-8 not-prose" id="video">
+      <VideoPlayer
+        posterUrl={videoData.poster}
+        title={videoData.title}
+        video={videoData}
+      />
+    </div>
+  );
+}
 
 export const narrativeMDXComponents = {
   // Custom Specialized Domain Components
@@ -23,6 +56,9 @@ export const narrativeMDXComponents = {
   Speech,
   DownloadSection,
   DownloadFiles: DownloadSection,
+  BoothVideo,
+  ProgramVideo: BoothVideo,
+  VideoPlayer: BoothVideo,
 
   // Semantic Typography Enhancements
   h1: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (

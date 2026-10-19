@@ -2,7 +2,7 @@
 
 import type { Program } from "@/types/program";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@heroui/react";
@@ -10,6 +10,7 @@ import { Button } from "@heroui/react";
 import { Reveal } from "@/components/reveal";
 import { DownloadSection } from "@/components/download-section";
 import { ExpandIcon } from "@/components/icons";
+import { VideoPlayer } from "@/components/video-player";
 import { cn } from "@/lib/utils";
 
 /* -------------------------------------------------------------------------- */
@@ -196,51 +197,19 @@ function StandaloneSummary({ summary }: { summary: string[] }) {
 function StandaloneVideo({
   video,
   posterUrl,
-  videoFailed,
-  onError,
 }: {
   video: NonNullable<Program["video"]>;
   posterUrl?: string;
-  videoFailed: boolean;
-  onError: () => void;
 }) {
   return (
     <Reveal media>
-      <section
-        className="flex flex-col gap-3 rounded-2xl border border-border bg-surface/50 p-4"
-        id="video"
-      >
-        <div className="flex items-center justify-between">
-          <h2 className="text-sm font-bold text-foreground flex items-center gap-2">
-            <span>📹</span>
-            <span>{video.title || "ویدئوی معرفی نحوه اجرا"}</span>
-          </h2>
-          {video.duration && (
-            <span className="text-xs text-muted font-mono">
-              {video.duration}
-            </span>
-          )}
-        </div>
-
-        <video
-          controls
-          playsInline
-          aria-label={video.title || "ویدئوی معرفی"}
-          className="w-full aspect-video object-cover bg-background rounded-xl border border-border"
-          poster={video.poster || posterUrl}
-          preload="none"
-          onError={onError}
-        >
-          <source src={video.url} type="video/mp4" />
-          <track kind="captions" label="فارسی" srcLang="fa" />
-        </video>
-
-        {videoFailed && (
-          <p className="text-xs text-danger" role="alert">
-            ویدیو در دسترس نیست یا در حال بارگذاری است.
-          </p>
-        )}
-      </section>
+      <div id="video">
+        <VideoPlayer
+          posterUrl={video.poster || posterUrl}
+          title={video.title}
+          video={video}
+        />
+      </div>
     </Reveal>
   );
 }
@@ -296,8 +265,11 @@ export function StandaloneProgramView({
   children: React.ReactNode;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
-  const [videoFailed, setVideoFailed] = useState(false);
   const hasImage = Boolean(program.coverImage?.url);
+  const hasVideo = Boolean(
+    program.video?.url ||
+    (program.video?.sources && program.video.sources.length > 0),
+  );
 
   return (
     <article
@@ -325,18 +297,18 @@ export function StandaloneProgramView({
         />
 
         <StandaloneSectionNav
-          hasDownloads={Boolean(program.downloads && program.downloads.length > 0)}
+          hasDownloads={Boolean(
+            program.downloads && program.downloads.length > 0,
+          )}
           hasSummary={Boolean(program.summary && program.summary.length > 0)}
-          hasVideo={Boolean(program.video?.url)}
+          hasVideo={hasVideo}
         />
 
-        {/* Intro Video section if available */}
-        {program.video?.url && (
+        {/* Intro Video section if available at top */}
+        {hasVideo && program.video && program.video.placement !== "inline" && (
           <StandaloneVideo
             posterUrl={program.coverImage?.url}
             video={program.video}
-            videoFailed={videoFailed}
-            onError={() => setVideoFailed(true)}
           />
         )}
 

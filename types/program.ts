@@ -9,11 +9,19 @@ export interface ProgramCover {
   blurDataURL?: string;
 }
 
+export interface VideoSource {
+  src: string;
+  type: string; // e.g. 'video/mp4; codecs="hvc1"' or 'video/mp4; codecs="avc1"'
+  quality?: string;
+}
+
 export interface ProgramVideo {
-  url: string;
+  url?: string;
+  sources?: VideoSource[];
   poster?: string;
   title?: string;
   duration?: string;
+  placement?: "top" | "inline";
 }
 
 export interface ProgramDownloadItem {

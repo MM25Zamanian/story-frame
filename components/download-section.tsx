@@ -2,7 +2,11 @@ import type { ProgramDownloadItem } from "@/types/program";
 
 import React from "react";
 
-import { DownloadIcon, PdfFileIcon, PresentationFileIcon } from "@/components/icons";
+import {
+  DownloadIcon,
+  PdfFileIcon,
+  PresentationFileIcon,
+} from "@/components/icons";
 import { Reveal } from "@/components/reveal";
 import { cn } from "@/lib/utils";
 

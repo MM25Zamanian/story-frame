@@ -1,4 +1,9 @@
-import type { Category, HomeEntry, Program, ProgramItem } from "@/types/program";
+import type {
+  Category,
+  HomeEntry,
+  Program,
+  ProgramItem,
+} from "@/types/program";
 
 import fs from "fs";
 import path from "path";
