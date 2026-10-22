@@ -4,7 +4,6 @@ import type { Program } from "@/types/program";
 
 import React, { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@heroui/react";
 
 import { Reveal } from "@/components/reveal";
@@ -78,13 +77,7 @@ function StandaloneHeader({
 }) {
   return (
     <header className="flex flex-col gap-3 border-b border-border/70 pb-5">
-      <div className="flex items-center justify-between gap-2">
-        <Link
-          className="inline-flex items-center gap-1 text-xs text-muted hover:text-accent transition-colors"
-          href="/"
-        >
-          <span>← بازگشت به صفحه اصلی</span>
-        </Link>
+      <div className="flex items-center justify-start gap-2">
         <span className="text-xs font-semibold text-accent bg-accent/10 px-2.5 py-0.5 rounded-full border border-accent/20">
           {formatTitle}
         </span>
@@ -329,12 +322,13 @@ export function StandaloneProgramView({
 
         {/* Bottom Back Button */}
         <div className="pt-6 border-t border-border/80 flex justify-center">
-          <Link
-            className="inline-flex items-center gap-2 text-xs font-semibold text-accent bg-surface hover:bg-accent hover:text-accent-foreground px-4 py-2.5 rounded-xl border border-border transition-colors"
-            href="/"
+          <button
+            className="inline-flex items-center gap-2 text-xs font-semibold text-accent bg-surface hover:bg-surface-hover px-4 py-2.5 rounded-xl border border-border transition-colors cursor-pointer"
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <span>← مشاهده سایر برنامه‌ها و تابلوهای مصور</span>
-          </Link>
+            <span>↑ بازگشت به ابتدای سناریو</span>
+          </button>
         </div>
       </div>
 

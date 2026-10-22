@@ -191,6 +191,34 @@ export default function HomePage() {
             </Reveal>
           );
         })}
+
+        {/* Minimal Banner for Services */}
+        <Reveal>
+          <div className="mt-4 p-6 sm:p-7 rounded-2xl border border-dashed border-accent/40 bg-accent/5 hover:bg-accent/10 transition-colors duration-200">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span className="inline-flex items-center text-[11px] font-bold px-2 py-0.5 rounded-md bg-accent/15 text-accent border border-accent/25 mb-2">
+                  تدارکات و پشتیبانی
+                </span>
+                <h3 className="text-base sm:text-lg font-bold text-foreground">
+                  قصد برگزاری مراسم یا اجرای این سناریوها را دارید؟
+                </h3>
+                <p className="text-xs sm:text-sm text-muted mt-1 max-w-lg leading-relaxed">
+                  فهرست تجهیزات سازه و صوت، غذای گرم، آبمیوه طبیعی و هدایای
+                  فرهنگی با تخفیف ویژه مخاطبان قاب روایت فراهم شده است.
+                </p>
+              </div>
+
+              <Link
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-accent text-accent-foreground text-xs font-bold hover:opacity-95 transition-all shadow-2xs shrink-0 self-start sm:self-center"
+                href="/services/"
+              >
+                <span>مشاهده خدمات ما</span>
+                <span className="text-sm">←</span>
+              </Link>
+            </div>
+          </div>
+        </Reveal>
       </section>
     </div>
   );

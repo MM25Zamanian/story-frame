@@ -88,7 +88,7 @@ if (fs.existsSync(programJsonPath)) {
 
 // 4. Move and rename documents
 const targetPdf = path.join(assetsDir, "booklet-trust-and-be-happy-15.pdf");
-const targetPptx = path.join(assetsDir, "presentation-trust-and-be-happy-15.pptx");
+const targetPptx = path.join(assetsDir, "the-life-portfolio.pptx");
 
 if (fs.existsSync(pdfSource)) {
   console.log("Moving PDF to assets...");

@@ -212,7 +212,7 @@ def test_uri_classification():
         ("/_next/sw.js", "service_worker"),
         # Unversioned documents
         ("/assets/seminar-1403/booklet-trust-and-be-happy-15.pdf", "static_unversioned"),
-        ("/assets/seminar-1403/presentation-trust-and-be-happy-15.pptx", "static_unversioned"),
+        ("/assets/seminar-1403/the-life-portfolio.pptx", "static_unversioned"),
     ]
 
     for uri, expected_profile in test_cases:
