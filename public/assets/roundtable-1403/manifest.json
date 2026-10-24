@@ -7,5 +7,22 @@
     "zoomWidth": 1024,
     "zoomHeight": 731,
     "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAADQBACdASogABcAP1WUv1W9MaulMAgDoCqJTGfIwsv4O0VYMYskMZRyT7q71q+DAAD+57/cdOJ7noiB/k4Syk9U8/YBqhlto4OcY8p388nCBJtVsarTX3y17A73+M5/0gx7Nw0oXvrURP6Pt8WEauy70XwfHDJCs0IuD9o0UFGQck9aGMrYnCE4bKtDIq6FILnKnZeAAAA="
+  },
+  "video": {
+    "sources": [
+      {
+        "src": "/assets/roundtable-1403/roundtable-intro-hevc.mp4",
+        "type": "video/mp4; codecs=\"hvc1\"",
+        "quality": "HD HEVC"
+      },
+      {
+        "src": "/assets/roundtable-1403/roundtable-intro-web.mp4",
+        "type": "video/mp4; codecs=\"avc1\"",
+        "quality": "HD Web"
+      }
+    ],
+    "duration": "۹ دقیقه و ۲۵ ثانیه",
+    "durationSeconds": 565,
+    "aspectRatio": "3/4"
   }
 }

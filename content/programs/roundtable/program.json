@@ -18,9 +18,23 @@
     "zoomUrl": "/assets/roundtable-1403/zoom/cover.webp"
   },
   "video": {
-    "url": "",
     "title": "ویدئوی معرفی و شیوه اجرای میزگرد",
-    "duration": "۱۸ دقیقه"
+    "duration": "۹ دقیقه و ۲۵ ثانیه",
+    "poster": "/assets/roundtable-1403/cover.webp",
+    "sources": [
+      {
+        "src": "/assets/roundtable-1403/roundtable-intro-hevc.mp4",
+        "type": "video/mp4; codecs=\"hvc1\"",
+        "quality": "HD HEVC"
+      },
+      {
+        "src": "/assets/roundtable-1403/roundtable-intro-web.mp4",
+        "type": "video/mp4; codecs=\"avc1\"",
+        "quality": "HD Web"
+      }
+    ],
+    "url": "/assets/roundtable-1403/roundtable-intro-web.mp4",
+    "aspectRatio": "3/4"
   },
   "summary": [
     "پرسش شوکه‌کننده آغازی درباره غصب هدیه پدر و مفهوم غصب کرامت و عدالت",

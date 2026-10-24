@@ -22,6 +22,7 @@ export interface ProgramVideo {
   title?: string;
   duration?: string;
   placement?: "top" | "inline";
+  aspectRatio?: string;
 }
 
 export interface ProgramDownloadItem {

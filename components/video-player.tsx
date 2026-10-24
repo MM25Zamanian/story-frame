@@ -104,6 +104,9 @@ export function VideoPlayer({
         }))
       : video.url || "";
 
+  const isPortrait =
+    video.aspectRatio === "3/4" || video.aspectRatio === "portrait";
+
   return (
     <section
       aria-label={displayTitle}
@@ -126,7 +129,14 @@ export function VideoPlayer({
       </div>
 
       {/* Vidstack Player Container */}
-      <div className="relative w-full aspect-video bg-neutral-950 overflow-hidden rounded-2xl border border-border shadow-md">
+      <div
+        className={cn(
+          "relative w-full bg-neutral-950 overflow-hidden rounded-2xl border border-border shadow-md",
+          isPortrait
+            ? "aspect-[3/4] max-h-[480px] sm:max-h-[540px] mx-auto"
+            : "aspect-video",
+        )}
+      >
         <MediaPlayer
           playsInline
           className="w-full h-full object-contain"
@@ -162,7 +172,9 @@ export function VideoPlayer({
       {/* Video Colophon */}
       <div className="flex items-center justify-between text-[11px] text-muted font-mono pt-1">
         <span>پخش جریانی با بهینه‌سازی دوگانه HEVC و H.264 Fallback</span>
-        <span className="hidden sm:inline">کیفیت استودیویی ۱۰۸۰p</span>
+        <span className="hidden sm:inline">
+          {isPortrait ? "کیفیت استودیویی HD" : "کیفیت استودیویی ۱۰۸۰p"}
+        </span>
       </div>
     </section>
   );

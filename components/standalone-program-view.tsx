@@ -121,6 +121,14 @@ function StandaloneSectionNav({
           کلیدواژه‌های اجرا
         </a>
       )}
+      {hasVideo && (
+        <a
+          className="min-h-[36px] flex items-center text-accent hover:underline"
+          href="#video"
+        >
+          ویدیو
+        </a>
+      )}
       <a
         className="min-h-[36px] flex items-center text-accent hover:underline"
         href="#full-script"
@@ -133,14 +141,6 @@ function StandaloneSectionNav({
           href="#downloads"
         >
           دانلود اسناد
-        </a>
-      )}
-      {hasVideo && (
-        <a
-          className="min-h-[36px] flex items-center text-accent hover:underline"
-          href="#video"
-        >
-          ویدیو
         </a>
       )}
     </nav>
@@ -297,17 +297,17 @@ export function StandaloneProgramView({
           hasVideo={hasVideo}
         />
 
-        {/* Intro Video section if available at top */}
+        {/* Compressed Keywords / Cheat-sheet for Execution */}
+        {program.summary && program.summary.length > 0 && (
+          <StandaloneSummary summary={program.summary} />
+        )}
+
+        {/* Execution Video section if available */}
         {hasVideo && program.video && program.video.placement !== "inline" && (
           <StandaloneVideo
             posterUrl={program.coverImage?.url}
             video={program.video}
           />
-        )}
-
-        {/* Compressed Keywords / Cheat-sheet for Execution */}
-        {program.summary && program.summary.length > 0 && (
-          <StandaloneSummary summary={program.summary} />
         )}
 
         {/* Main Narrative Script */}
