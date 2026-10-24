@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@heroui/react";
 import { Check, Copy } from "lucide-react";
 
 interface CopyButtonProps {
@@ -9,15 +8,13 @@ interface CopyButtonProps {
   label?: string;
   copiedLabel?: string;
   className?: string;
-  size?: "sm" | "md";
 }
 
 export function CopyButton({
   textToCopy,
   label = "کپی کد تخفیف",
-  copiedLabel = "کپی شد!",
+  copiedLabel = "کد کپی شد!",
   className = "",
-  size = "sm",
 }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
@@ -26,41 +23,45 @@ export function CopyButton({
       if (typeof navigator !== "undefined" && navigator.clipboard) {
         await navigator.clipboard.writeText(textToCopy);
         setCopied(true);
-        setTimeout(() => setCopied(false), 2200);
+        setTimeout(() => setCopied(false), 2400);
       }
     } catch {
-      // Fallback
       setCopied(true);
-      setTimeout(() => setCopied(false), 2200);
+      setTimeout(() => setCopied(false), 2400);
     }
   };
 
   return (
-    <Button
-      aria-label={`کپی ${textToCopy}`}
-      className={`font-mono text-xs font-semibold gap-1.5 transition-all duration-200 ${
+    <button
+      aria-label={`کپی کردن کد تخفیف ${textToCopy} در حافظه موقت`}
+      aria-live="polite"
+      className={`group relative min-h-[44px] px-4 py-2.5 rounded-xl font-mono text-xs font-semibold inline-flex items-center justify-center gap-2 transition-all duration-150 active:scale-[0.97] cursor-pointer focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 ${
         copied
-          ? "bg-success/15 text-success border border-success/30"
-          : "bg-surface text-foreground border border-border hover:border-accent hover:text-accent"
+          ? "bg-success/20 text-success border border-success/40 shadow-xs"
+          : "bg-surface hover:bg-surface-hover text-foreground border border-border hover:border-accent/60 shadow-2xs"
       } ${className}`}
-      size={size}
-      variant="outline"
-      onPress={handleCopy}
+      type="button"
+      onClick={handleCopy}
     >
       {copied ? (
         <>
-          <Check className="text-success" size={14} />
-          <span>{copiedLabel}</span>
+          <Check className="text-success shrink-0" size={16} />
+          <span className="font-sans font-bold">{copiedLabel}</span>
         </>
       ) : (
         <>
-          <Copy size={14} />
-          <span>{label}</span>
-          <span className="font-bold px-1.5 py-0.5 rounded bg-foreground/5 text-foreground">
+          <Copy
+            className="text-muted group-hover:text-accent transition-colors shrink-0"
+            size={15}
+          />
+          <span className="font-sans text-muted group-hover:text-foreground transition-colors">
+            {label}
+          </span>
+          <span className="font-bold px-2 py-0.5 rounded-md bg-foreground/10 text-foreground text-xs tracking-wider">
             {textToCopy}
           </span>
         </>
       )}
-    </Button>
+    </button>
   );
 }
